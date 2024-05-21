@@ -1,0 +1,120 @@
+:root {
+    --primary-color-dark: #eb5427;
+    --primary-color-light: rgb(255 192 174);
+    --primary-backgorund-light:#fefefe; 
+    --white-color:#fff;
+    --white-black:#000;
+    --light-grey:#232323;
+}
+body{
+    margin:0px;
+    padding: 0px;
+    color: var(--white-black);
+}
+a{
+    text-decoration: none;
+}
+button{
+border: none;
+}
+.right-form{
+    background-color: var(--primary-backgorund-light);
+}
+.right-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--light-grey);
+}
+.form-container{
+    margin-top: 20px;
+    min-width:550px;
+}
+.form-control {
+    border: 2px solid var(--primary-color-dark) !important;
+    transition: .3s;
+}
+.form-control:focus {
+    box-shadow: 4px 3px 8px 0rem var(--primary-color-light) !important;
+}
+.btn-form{
+    width: 100%;
+    background-color: var(--primary-color-dark);
+    color: var(--white-color);
+    padding: 8px 0px;
+    border: 1px solid var(--primary-color-dark);
+    transition: .3s;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-form:hover{
+    width: 100%;
+    background-color: var(--white-color);
+    color: var(--primary-color-dark);
+    padding: 8px 0px;
+}
+.forgot-password{
+    color: var(--white-black);
+}
+.form-check-input {
+    border: 1px solid var(--primary-color-dark) !important;
+}
+.form-check-input:checked {
+    background-color: var(--primary-color-dark);
+    color: var(--white-color);
+    border-color: var(--primary-color-dark);
+}
+.form-check-input:focus {
+    border-color: var(--primary-color-dark);
+    box-shadow: none !important;
+}
+.t-center{
+    font-weight: bold;
+    color: var(--primary-color-dark);
+    font-size: 24px;
+}
+.social-login{
+    padding: 5px 20px;
+    border: 2px solid var(--primary-color-dark);
+    background-color: var(--white-color);
+    transition: .3s;
+}
+.social-login img{
+    width: 10%;
+    margin-right: 10px;
+}
+.social-login:hover{
+    border: 2px solid var(--primary-color-dark);
+    background-color: var(--primary-color-dark);
+    color: var(--white-color);
+}
+.t-account{
+    font-size: 20px;
+}
+.create-account, .login-account{
+    color: var(--primary-color-dark);
+    font-weight: bold;
+}
+#login-main{
+    display: flex;
+}
+#signup-main{
+    display: none;
+}
+@media (max-width:767px){
+    .form-container{
+        min-width: 300px;
+        padding:0px 40px;
+    }
+    .heading h2 {
+        font-size: 1.5rem;
+    }
+    .r-gap{
+        row-gap: 20px;
+    }
+}
