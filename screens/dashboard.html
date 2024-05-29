@@ -1,0 +1,1651 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="base_url" value="#" />
+<title>Screen Application | Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<!-- <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="#"> -->
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+<link rel="stylesheet" href="../assets/css/screen-css/fullcalendar.css">
+<link rel="stylesheet" href="../assets/css/screen-css/fullcalendar.print.css">
+<link rel="stylesheet" href="../assets/css/screen-css/owl.carousel.min.css">
+<link rel="stylesheet" href="../assets/css/screen-css/owl.theme.default.min.css">
+<link rel="stylesheet" href="../assets/css/screen-css/nice-select.css">
+<link rel="stylesheet" href="../assets/css/screen-css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/screen-css/all.min.css">
+<link rel="stylesheet" href="../assets/css/screen-css/style.css?cacheOverride=2024.1">
+
+<link rel="stylesheet" href="../assets/css/screen-css/lightbox.min.css">
+<link rel="stylesheet" href="../assets/css/screen-css/media.css">
+<link rel="stylesheet" href="../assets/css/screen-css/dropzone.css">
+<link rel="stylesheet" href="../assets/css/screen-css/animation.css">
+<link rel="stylesheet" href="../assets/css/screen-css/slick.css">
+<link rel="stylesheet" href="../assets/css/screen-css/customize-alert.css">
+<link rel="stylesheet" href="../assets/css/screen-css/magnific-popup.css">
+
+</head>
+
+<body>
+
+
+<script>
+	document.querySelector("body").style.zoom = "90%";
+</script>
+<span class="sidebar-collapse-btn-2" id="sidebar-collapse-btn-two"><i class="fas fa-chevron-left"></i></span>
+
+<div class="modal fade" id="MoveToFolderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<form action="#" method="post">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Move your file</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<input type="hidden" name="assetid" id="assetid" value="0">
+<select name="folderid" class="form-control select_field" id>
+<option>Choose Folder</option>
+</select>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Save</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<div class="modal fade" id="MoveFolderToFolder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<form action="#" method="post">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Move your Folder</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<input type="hidden" name="movefolder" id="movefolder" value="0">
+<input type="hidden" name="redirectpath" id="redirectpath" value>
+<select name="folderid" class="form-control select_field" id>
+<option>Choose Folder</option>
+</select>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Save</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<div class="modal fade" id="sendToPlaylistModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<form action="#/sendtoplaylist" method="post">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Send this file to playlist</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<input type="hidden" name="assetid" id="assetid2" value="0">
+<select name="playlistid" class="form-control select_field" id>
+<option>Choose Playlist</option>
+<option value="232">Test 3</option>
+<option value="231">test 2</option>
+<option value="230">test</option>
+</select>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Save</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<div class="modal fade" id="create_folder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Enter your folder name</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<form action="#/createfolder" method="post">
+<input type="hidden" name="folder_type" id="folder_type" value="Asset">
+<input type="text" name="folder_name" class="form-control mb-3" placeholder="Folder Name">
+<input type="submit" value="Create" class="cretae_folder_btn">
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="appModal" tabindex="-1" aria-labelledby="ActionappFolder" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 id="appalertmsg" style="display: none;">Successfully Saved..</h4>
+<button onClick="showAppForm('mainbody');" type="button" class="btn-close" style="background: #070707!important;padding-top: 2px!important;" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+</div>
+<div class="modal-body" id="mainbody" style="display:block;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top select_app_icon" src="https://displaylab.net/icons/app.png" style="height: 70px;width: 70px;" alt="Card image cap">
+<h4 class="app_headline" style="text-align:center;margin-bottom: 10px;">Select App</h4>
+<p style="text-align:center;line-height:16px!important;font-size:13px!important;">Connect with us</p>
+</center>
+<br>
+<center class="border-1" style="line-height: 1;">
+<div class="btn-group mr-2" role="group" aria-label="First group">
+<button onclick="showAppForm('facebookbody');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/facebook.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+<button onclick="showAppForm('instagrambody');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/instagram.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+<button onClick="showAppForm('youtubeform');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/youtube.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+<button onClick="showAppForm('twitterform');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/twitter.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+</div>
+</center>
+</div>
+<div class="modal-body" id="youtubeform" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/youtube.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<h5>youtube</h5>
+<br><br>
+<form action="javascript:void(0);">
+<div class="form-group">
+<input type="text" class="form-control cusmoin" id="name_youtube" name="name_youtube" placeholder="Enter name..">
+</div>
+<div class="form-group">
+<input type="text" class="form-control cusmoin" id="youtube_url" name="youtube_url" placeholder="Enter Url...">
+</div>
+<button type="button" onClick="AppPost('youtube_post');" class="btn-block customModalButton">Save</button>
+</form>
+</center>
+</div>
+<div class="modal-body" id="twitterform" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/twitter.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<h5 style="margin-top:10px;">twitter</h5>
+<br><br>
+<form action="javascript:void(0);" method="POST">
+<input type="hidden" name="twitter_wall" value="twitter_wall">
+<div class="form-group">
+<input type="text" class="form-control cusmoin" id="wall_name" name="wall_name" placeholder="wall name..">
+</div>
+<div class="form-group">
+<select class="form-control" id="post_type" name="post_type">
+<option value="hastag">Hastag</option>
+<option value="Profile">Profile</option>
+</select>
+</div>
+<div class="form-group">
+<select class="form-control" id="display_mode" name="display_mode">
+<option value="social_kiosk_view">Social Kiosk View</option>
+<option value="single_post_view">Single Post View</option>
+<option value="social_wall_view">Social Wall View</option>
+<option value="timeline_view">Timeline View</option>
+</select>
+</div>
+<div class="form-group">
+<select class="form-control" id="theme" name="theme">
+<option value="light_theme">Light Theme</option>
+<option value="dark_theme">Dark Theme</option>
+</select>
+</div>
+<button type="button" onClick="AppPost('twitter_wall');" class="btn-block customModalButton">Save</button>
+</form>
+</center>
+</div>
+<div class="modal-body" id="facebookbody" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/facebook.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<br><br>
+<a href="javascript:void();">
+<button type="button" class="btn btn-block" style="background:#1b62ff!important;color: #fff!important;border: 1px solid #1b62ff!important;height:36px;border-radius: 5px;">Follow us on facebook</button>
+</a>
+</center>
+</div>
+<div class="modal-body" id="instagrambody" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/instagram.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<br><br>
+<a href="javascript:void();">
+<button type="button" class="btn btn-block" style="background:#1b62ff!important;color: #fff!important;border: 1px solid #1b62ff!important;height:36px;border-radius: 5px;">Follow us on instagram</button>
+</a>
+</center>
+</div>
+<div class="modal-footer">
+<br>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="create_playlist" tabindex="-1" aria-labelledby="ActionFolder" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="ActionFolder">Create your playlists</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<form id="folderactionform" action method="post">
+<input type="hidden" name="reloc" id="reloc" value>
+<input type="hidden" name="foldid" id="foldid123" value="0">
+<input type="hidden" name="folder_type" id="folder_type1234" value>
+<input type="text" name="folder_name" id="folder_name" class="form-control mb-3" placeholder="Enter playlist name" required>
+<input type="submit" value="Create" class="cretae_folder_btn">
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    function callMove(assetid){
+        document.getElementById("assetid").value=assetid;
+        $('#MoveToFolderModal').modal('show'); 
+
+    }
+    function callMoveFolder(folder, redirectpath){
+        document.getElementById("movefolder").value=folder;
+        document.getElementById("redirectpath").value=redirectpath;
+        $('#MoveFolderToFolder').modal('show'); 
+
+    }
+
+     function sendToplaylist(assetid){
+        document.getElementById("assetid2").value=assetid;
+        $('#sendToPlaylistModal').modal('show'); 
+
+    }
+
+    function callCreateFol(data){
+        if(data=="Asset"){
+        var textval = "Folder"; 
+        var typetval = "Asset";
+        var modalid = "#create_playlist";    
+        }
+        else if(data=="Playlist"){
+        var textval = "Playlist";   
+        var typetval = "Playlist";
+        var modalid = "#create_playlist";  
+        }
+        else if(data=="AppModal"){
+        var textval = "";   
+        var typetval = "";
+        var modalid = "#appModal";    
+        }
+
+        document.getElementById("folder_type1234").value=typetval;
+        document.getElementById("folderactionform").action="#/createfolder";
+        document.getElementById("ActionFolder").innerHTML="Create your "+textval+"s";
+        document.getElementById("folder_name").placeholder="Enter "+textval+" name";
+        $(modalid).modal('show'); 
+    }
+
+
+    function callEditFol(name,data,foltype,reloc){
+        if(foltype=="Asset"){
+        var textval = "Folder";    
+        }
+        else if(foltype=="Playlist"){
+        var textval = "Playlist";    
+        }
+        document.getElementById("folderactionform").action="#/editfolder";
+        document.getElementById("foldid123").value=data;
+         document.getElementById("folder_type1234").value=foltype;
+        document.getElementById("folder_name").value=name;
+        document.getElementById("reloc").value=reloc;
+        document.getElementById("ActionFolder").innerHTML="Edit your "+textval+" name";
+       
+        $('#create_playlist').modal('show'); 
+    }
+    
+</script>
+<script type="text/javascript">
+    function setAnimation(id){
+        path = "#/updateAnimation";
+        animation = document.getElementById('animationsel').value;
+        $.get(path,{id:id, animation:animation});
+        setTimeout(function(){
+        location.reload();
+        },1000);
+    }
+</script>
+<input type="hidden" id="updateorder" value="#/updateorder">
+<input type="hidden" id="savethumbnail" value="#/savethumbnail">
+<script type="text/javascript">
+    function showAppForm(data){
+    if(data=="youtubeform"){
+    $('#'+data).show(); 
+    $('#twitterform').hide();
+    $('#mainbody').hide();
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();   
+    }
+    else if(data=="twitterform"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#mainbody').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();  
+    } 
+    else if(data=="facebookbody"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#mainbody').hide(); 
+    $('#twitterform').hide();
+    $('#instagrambody').hide();  
+    } 
+    else if(data=="instagrambody"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#mainbody').hide(); 
+    $('#twitterform').hide();
+    $('#facebookbody').hide();  
+    }
+    else if(data=="mainbody"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#twitterform').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();  
+    }  
+    }
+</script>
+<script type="text/javascript">
+    function AppPost(postfor){
+    if(postfor=="youtube_post"){
+
+    var name_youtube = document.getElementById('name_youtube').value;
+    var youtube_url = document.getElementById('youtube_url').value;
+
+    $.post('#/'+postfor,{name_youtube:name_youtube,youtube_url:youtube_url});
+
+    $('#mainbody').show(); 
+    $('#youtubeform').hide();
+    $('#twitterform').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();
+
+    document.getElementById('name_youtube').value=" ";
+    document.getElementById('youtube_url').value=" ";
+
+    $('#appalertmsg').fadeIn();
+    setTimeout(function(){
+    $('#appalertmsg').fadeOut();    
+    },1000);
+    }
+    else if(postfor=="twitter_wall"){
+
+    var wall_name = document.getElementById('wall_name').value;
+    var post_type = document.getElementById('post_type').value;
+    var display_mode = document.getElementById('display_mode').value; 
+    var theme = document.getElementById('theme').value;
+
+    $.post('#/'+postfor,{wall_name:wall_name,post_type:post_type,display_mode:display_mode,theme:theme});
+
+    $('#mainbody').show(); 
+    $('#youtubeform').hide();
+    $('#twitterform').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();
+
+    document.getElementById('wall_name').value=" ";
+    document.getElementById('post_type').value=" ";
+    document.getElementById('display_mode').value=" "; 
+    document.getElementById('theme').value=" ";
+
+    $('#appalertmsg').fadeIn();
+    setTimeout(function(){
+    $('#appalertmsg').fadeOut();    
+    },1000);
+    }
+        
+    }
+</script>
+<script type="text/javascript">
+  function duplicateFolder(id){
+  $.get('#/duplicateFolder', {id:id});
+  location.reload();  
+  }
+</script>
+
+<div class="modal fade" id="upload_file" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<span class="pull-left"><h5 class="modal-title" id="exampleModalLongTitle">Upload File</h5></span>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+</div>
+<div class="modal-body create_folder_form">
+<label for="select_file" class="click-to-upload" tabindex="-1">Click To Upload</label>
+<input type="file" id="select_file" class="form-control" multiple hidden />
+<h6 class="fs-6 text pt-2" style="font-size: 12px!important;opacity: 1;
+    letter-spacing: 0.3px;">* Upload File Size should be limited to 50MB</h6>
+<div class="progress" id="progress_bar" style="display:none;margin-top: 14px; ">
+<div class="progress-bar" id="progress_bar_process" role="progressbar" style="width:0%">0%</div>
+</div>
+<div id="uploaded_image" class="row" style="margin-top: 10px;"></div>
+</div>
+</div>
+</div>
+</div>
+
+<input type="hidden" name="useridsession" id="useridsession" value="83">
+
+<div class="modal fade" id="send_screen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<form action="#/updatescreenplaylist" name="form1" method="POST" onsubmit="return validate_sendscreen();">
+<div class="modal-header">
+<span class="pull-left"><h5 class="modal-title" id="exampleModalLongTitleas">Send To Screen - </h5></span>
+<span class="pull-right">
+<button type="button" onclick="refresh();" class="btn-block base_color2" style="color: red!important;border: 1px solid #3095b5!important;height:36px;background: #fff;border-radius: 5px;padding: 0px 15px;">Cancel</button>
+</span>
+</div>
+<div class="modal-body create_folder_form">
+<div class="row">
+<div class="col-md-12">
+<input type="hidden" name="playlist" value="232">
+<input type="hidden" name="page" value="playlist">
+<div style="height:150px;overflow-y:scroll;">
+<div class="form-group form-check" style="text-align: center;margin: 10% 0px;">
+<span>No screen found!</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    function validate_sendscreen() 
+    {
+        var checkboxes = document.getElementsByName('screen[]');
+        var vals = "";
+        for (var i=0, n=checkboxes.length;i<n;i++) 
+        {
+            if (checkboxes[i].checked) 
+            {
+                vals += ","+checkboxes[i].value;
+            }
+        }
+        if (vals) vals = vals.substring(1);
+        if(vals==""){
+        swal({
+  text: "You must choose at least one Screen!",
+});
+        return false;
+        }
+    }   
+</script>
+<script type="text/javascript">
+    function checkAll(val,tot) {
+    if(val==0){
+    document.getElementById('allcheck').value="1";    
+    var fr = true;     
+    }    
+    else{
+    document.getElementById('allcheck').value="0";
+    var fr = false;     
+    } 
+    for (let i = 0; i < tot; i++) {
+    document.getElementById("screencheck"+i).checked = fr;    
+    }
+    return false
+    }
+
+    function refresh(){
+        var splayst = "playlist";
+        var url = "/playlist/pllist/232";
+        if(splayst == "playlist"){
+        window.open('#','_self');
+        } else {
+            window.open('#','_self');
+    }
+    }
+
+</script>
+
+
+<section class="dashboard_area">
+<div class="sidebar_content">
+<div id="sidebar" class="sidebar d-flex flex-column justify-content-between">
+
+<div>
+<div class="dashboard_title">
+<div>
+<h1><a href="#" style="color:#fff; text-decoration: none;">Screen Application</a></h1>
+
+</div>
+<div class="icon" id="sidebarCollapse">
+<i class="fas fa-chevron-left"></i>
+</div>
+</div>
+<div class="main_sidebar">
+<div class="search">
+<form action="#" method="post">
+<input type="text" name="search" placeholder="Search">
+<div class="icon">
+<i class="fas fa-search"></i>
+</div>
+</form>
+</div>
+</div>
+<ul id="accordionFlushExample">
+<li><a href="dashboard.html"><h3>Dashboard</h3></a> </li>
+<li><a href="screen.html"> Screen</a> </li>
+<li>
+<div class="accordion sidebar_accordion accordion-flush">
+<div class="accordion-item">
+<h2 class="accordion-header" id="flush-headingOne">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar_accordion" aria-expanded="false" aria-controls="flush-collapseOne">
+<!-- <span></span> -->
+<h3>Assets / Template</h3>
+</button>
+</h2>
+<div id="sidebar_accordion" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+<div class="accordion-body">
+<ul>
+<li>
+<a href="#">
+Assets
+</a>
+</li>
+<li>
+<a href="javascript:void(0);" onclick="callCreateFol('AppModal');">
+Apps
+</a>
+</li>
+<li>
+<a href="#">
+Template
+</a>
+</li>
+</ul>
+<div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+
+<li>
+<div class="accordion sidebar_accordion accordion-flush">
+<div class="accordion-item">
+<span></span> <h2 class="accordion-header" id="flush-headingTwo">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar_accordion-2" aria-expanded="false" aria-controls="flush-collapseOne">
+<span></span>
+<h3>Playlists Menu</h3>
+</button>
+</h2>
+<div id="sidebar_accordion-2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+<div class="accordion-body">
+<ul>
+<li>
+<a href="#"> Playlists</a>
+</li>
+<li>
+<a href="#">Saved Template</a>
+</li>
+<li>
+<a href="#"> Running Playlist</a>
+</li>
+</ul>
+<div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li> <a href="#"> Schedule</a> </li>
+</ul>
+</div>
+<div class="signout text-center py-3">
+<a href="#"><i class="fas fa-sign-out-alt"></i>Log out</a>
+</div>
+<div class="signout text-center py-3">
+<div class="text-center m-0" style="display:flex;flex-wrap: wrap;justify-content:center; ">
+<a style="color: #625e5e;font-size: 16px;padding:0; width:100%;margin-right: 6px;" class="helper-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" href="#offcanvasExample">Help</a>
+<div>
+<a href="#" class="helper-btn" style="font-size: 14px;color: #625e5e; padding: 0;margin-left: 20px;
+margin-right: 8px;">Privacy Policy</a> <span style="color: #606060;font-weight: 800;">|</span> <a href="#" class="helper-btn" style="font-size: 14px;color: #625e5e;padding:0; padding-left:8px;">Terms & condition</a>
+</div>
+</div>
+<span style="color: #3095B5;font-size: 14px;font-weight: bold;">Copyright © 2024 Screen Application. <br/>All rights reserved.</span><br/>
+
+
+
+</div>
+</div>
+<div id="content" class="content_area playlist_content_area">
+
+<div class="main_header">
+<div class="row m-0 align-items-center">
+<div class="col-6 col-sm-4">
+<div class="left_header1">
+<h2>Playlist</h2>
+</div>
+</div>
+<div class="col-6 col-sm-4 m-auto mobile_hide">
+
+</div>
+<div class="col-6 col-sm-4">
+
+<div class="header_right_side">
+<div class="content">
+<h4>Good Afternoon</h4>
+</div>
+<a href="profile.html" class="top-profile-thumbnail">
+Profile
+</a>
+
+</div>
+</div>
+</div>
+</div>
+
+<style type="text/css">.list{height: 180px!important;overflow-y: scroll!important;}</style>
+
+<div class="main_content_area">
+<div class="row mt-0">
+<div class="col-md-9 col-sm-12 first_col playlist_item_btn Playlist_maintance " style="display:none!important;">
+<div class="Playlist_heading">
+<h2>Test 3</h2>
+</div>
+</div>
+
+<div id="playlist_sidebar" class="mCustomScrollbar _mCS_2 mCS-autoHide mCS_no_scrollbar" style="overflow: visible;"><div id="mCSB_2" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 671px;"><div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+<div class="dashboard_title">
+<div class="icon" id="playlist_sidebar_Collapse">
+<i class="fas fa-chevron-left"></i>
+</div>
+</div>
+<div class="for_bg_color">
+<h1>All Playlists</h1>
+<ul class="Play_List3 scrollbar">
+<li class="Play_1 active">
+<div class="playlist_div_1 ">
+<a href="#"><i class="fas fa-play"></i>Test 3</a>
+</div>
+<div class="dot_dot">
+<a href="javascript:void(0)" class="dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-ellipsis-v">
+</i>
+</a>
+<ul class="dropdown-menu">
+<a href="#"><li>Open</li></a>
+<a href="javascript:void(0);" onclick="duplicateFolder('232');"><li>Duplicate</li></a>
+<a href="javascript:void(0);" onclick="callEditFol('Test 3', '232', 'Playlist', '#');"><li>Edit</li></a>
+<a class="customConfirm" data-custom-text="Are you sure to delete this playlist?" onclick="return false;" href="#"><li>Delete</li></a>
+</ul>
+</div>
+</li>
+<li class="Play_1 ">
+<div class="playlist_div_1 ">
+<a href="#"><i class="fas fa-play"></i>test 2</a>
+</div>
+<div class="dot_dot">
+<a href="javascript:void(0)" class="dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-ellipsis-v">
+</i>
+</a>
+<ul class="dropdown-menu">
+<a href="#"><li>Open</li></a>
+<a href="javascript:void(0);" onclick="duplicateFolder('231');"><li>Duplicate</li></a>
+<a href="javascript:void(0);" onclick="callEditFol('test 2', '231', 'Playlist', '#');"><li>Edit</li></a>
+<a class="customConfirm" data-custom-text="Are you sure to delete this playlist?" onclick="return false;" href="#"><li>Delete</li></a>
+</ul>
+</div>
+</li>
+<li class="Play_1 ">
+<div class="playlist_div_1 ">
+<a href="#"><i class="fas fa-play"></i>test</a>
+</div>
+<div class="dot_dot">
+<a href="javascript:void(0)" class="dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-ellipsis-v">
+</i>
+</a>
+<ul class="dropdown-menu">
+<a href="#"><li>Open</li></a>
+<a href="javascript:void(0);" onclick="duplicateFolder('230');"><li>Duplicate</li></a>
+<a href="javascript:void(0);" onclick="callEditFol('test', '230', 'Playlist', '#');"><li>Edit</li></a>
+<a class="customConfirm" data-custom-text="Are you sure to delete this playlist?" onclick="return false;" href="#"><li>Delete</li></a>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div></div><div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-minimal mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 0px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+
+<div class="col-md-3 col-sm-12 second_col playlist_btn_row" style="display:none!important;">
+
+<div class="Playlist_create">
+<a href="javascript:void(0);" onclick="callCreateFol('Playlist');">Create</a>
+</div>
+</div>
+</div>
+<div class="row mt-4">
+<div class="col-md-9 col-sm-12">
+<div class="col-md-12 first_col second_col playlist_item_btn playlist-asset-1 flex-wrap mb-3">
+<div class="Playlist_heading">
+
+<h2 class="playlist-page-title-2">Test 3</h2>
+</div>
+<select class="form-select animation" id="animationsel" onchange="setAnimation(232);">
+<option value="Default">Default</option>
+<option value="FadeIn">FadeIn</option>
+<option value="FadeInDown">FadeInDown</option>
+<option value="FadeInDownBig">FadeInDownBig</option>
+<option value="FadeInUp">FadeInUp</option>
+<option value="FadeInUpBig">FadeInUpBig</option>
+<option value="FadeInLeft">FadeInLeft</option>
+<option value="FadeInLeftBig">FadeInLeftBig</option>
+<option value="FadeInRight">FadeInRight</option>
+<option value="FadeInRightBig">FadeInRightBig</option>
+<option value="FadeOut">FadeOut</option>
+<option value="FadeOutDown">FadeOutDown</option>
+<option value="FadeOutDownBig">FadeOutDownBig</option>
+<option value="FadeOutUp">FadeOutUp</option>
+<option value="FadeOutUpBig">FadeOutUpBig</option>
+<option value="FadeOutLeft">FadeOutLeft</option>
+<option value="FadeOutLeftBig">FadeOutLeftBig</option>
+<option value="FadeOutRight">FadeOutRight</option>
+<option value="FadeOutRightBig">FadeOutRightBig</option>
+<option value="BounceInDown">BounceInDown</option>
+<option value="BounceInUp">BounceInUp</option>
+<option value="BounceInLeft">BounceInLeft</option>
+<option value="BounceInRight">BounceInRight</option>
+<option value="ElasticIn">ElasticIn</option>
+<option value="ElasticInDown">ElasticInDown</option>
+<option value="ElasticInUp">ElasticInUp</option>
+<option value="ElasticInLeft">ElasticInLeft</option>
+<option value="ElasticInRight">ElasticInRight</option>
+<option value="SlideInDown">SlideInDown</option>
+<option value="SlideInUp">SlideInUp</option>
+<option value="SlideInLeft">SlideInLeft</option>
+<option value="SlideInRight">SlideInRight</option>
+<option value="FlipInX">FlipInX</option>
+<option value="FlipInY">FlipInY</option>
+<option value="Zooms">Zooms</option>
+<option value="ZoomIn">ZoomIn</option>
+<option value="ZoomOut">ZoomOut</option>
+<option value="Bounce">Bounce</option>
+<option value="Flash">Flash</option>
+<option value="Pulse">Pulse</option>
+<option value="Swing">Swing</option>
+<option value="Spin">Spin</option>
+<option value="Dance">Dance</option>
+<option value="Roulette">Roulette</option>
+</select>
+<div class="play_send">
+<a href="#" class="send" data-bs-toggle="modal" data-bs-target="#send_screen">Send</a>
+</div>
+<div class="preview_btn">
+<a target="_blank" class href="#"><i class="fas fa-tv"></i> Preview</a>
+</div>
+<div class="play_Time mt-2 mt-sm-0">
+<div class="PlayTime"> <span>Play <br> Time</span><p>0 s</p></div>
+</div>
+<div class="playlist_pllist Playlist_create mobile_view mt-2">
+<a href="javascript:void(0);" class="mt-0" onclick="callCreateFol('Playlist');">Create</a>
+</div>
+</div>
+<div class="col-md-12 justify-content-between scrollbar py-3 reorder-gallery bg-gray-new px-3 px-2 align-content-start">
+<center style="height: 628px;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
+<p style="color:#005582;font-weight: 700;">No Playlist Assets Found!</p>
+</center>
+</div>
+</div>
+<script>
+  function clsAlphaNoOnly (e) {  // Accept only alpha numerics, no special characters 
+    var regex = new RegExp("^[0-9 ]+$");
+    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (regex.test(str)) {
+        return true;
+    }
+
+    e.preventDefault();
+    return false;
+}
+  
+</script>
+<script type="text/javascript">
+                        function callSettingsModal(id){
+                            $('#settingsModal'+id).modal('show');     
+                        }
+                        
+                        function UpdatePlaySettings(id){
+                        var salert = "settingsupdate"+id;    
+                        var path = "#/UpdatePlaySettings";    
+                        var playtime = document.getElementById('play_time'+id).value; 
+                        var defaulttransition = document.getElementById('default_transition'+id).value; 
+                        
+                        $.post(path,{id:id,playtime:playtime,defaulttransition:defaulttransition},function(data){
+                            if(data==1){
+                                document.getElementById(salert).className="alert alert-primary";
+                                document.getElementById(salert).innerHTML="Successfully Updated"; 
+                                $('#'+salert).fadeIn();
+                                setTimeout(function(){
+                                    $('#'+salert).fadeOut();    
+                                    location.reload();    
+                                },1000);    
+                            }
+                            else{
+                                document.getElementById(salert).className="alert alert-danger";
+                                document.getElementById(salert).innerHTML="Sorry, Something went wrong!"; 
+                                $('#'+salert).fadeIn();
+                                setTimeout(function(){
+                                    $('#'+salert).fadeOut();     
+                                    location.reload();    
+                                },1000);    
+                            }    
+                            
+                        });
+                        
+                        }
+                    </script>
+<div class="col-md-3 hide_for_mobile">
+<div class="Playlist_create mb-3">
+<a href="javascript:void(0);" onclick="callCreateFol('Playlist');">Create</a>
+</div>
+<div class="for_bg_color  sidebar-658">
+<h1>All Playlists</h1>
+<ul class="Play_List3 scrollbar">
+<li class="Play_1 active">
+<div class="playlist_div_1 ">
+<a href="#"><i class="fas fa-play"></i>Test 3</a>
+</div>
+<div class="dot_dot">
+<a href="javascript:void(0)" class="dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-ellipsis-v">
+</i>
+</a>
+<ul class="dropdown-menu">
+<a href="#"><li>Open</li></a>
+<a href="javascript:void(0);" onclick="duplicateFolder('232');"><li>Duplicate</li></a>
+<a href="javascript:void(0);" onclick="callEditFol('Test 3', '232', 'Playlist', '#');"><li>Edit</li></a>
+<a class="customConfirm" data-custom-text="Are you sure to delete this playlist?" onclick="return false;" href="https://displaylab.net//Home/deletefolder/232"><li>Delete</li></a>
+</ul>
+</div>
+</li>
+<li class="Play_1 ">
+<div class="playlist_div_1 ">
+<a href="#"><i class="fas fa-play"></i>test 2</a>
+</div>
+<div class="dot_dot">
+<a href="javascript:void(0)" class="dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-ellipsis-v">
+</i>
+</a>
+<ul class="dropdown-menu">
+<a href="#"><li>Open</li></a>
+<a href="javascript:void(0);" onclick="duplicateFolder('231');"><li>Duplicate</li></a>
+<a href="javascript:void(0);" onclick="callEditFol('test 2', '231', 'Playlist', '#');"><li>Edit</li></a>
+<a class="customConfirm" data-custom-text="Are you sure to delete this playlist?" onclick="return false;" href="https://displaylab.net//Home/deletefolder/231"><li>Delete</li></a>
+</ul>
+</div>
+</li>
+<li class="Play_1 ">
+<div class="playlist_div_1 ">
+<a href="#/230"><i class="fas fa-play"></i>test</a>
+</div>
+<div class="dot_dot">
+<a href="javascript:void(0)" class="dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fas fa-ellipsis-v">
+</i>
+</a>
+<ul class="dropdown-menu">
+<a href="#"><li>Open</li></a>
+<a href="javascript:void(0);" onclick="duplicateFolder('230');"><li>Duplicate</li></a>
+<a href="javascript:void(0);" onclick="callEditFol('test', '230', 'Playlist', '#');"><li>Edit</li></a>
+<a class="customConfirm" data-custom-text="Are you sure to delete this playlist?" onclick="return false;" href="#"><li>Delete</li></a>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="row mt-5" style="position:relative">
+
+<div id="assets_sidebar" class="mCustomScrollbar _mCS_2 mCS-autoHide mCS_no_scrollbar" style="overflow: visible;"><div id="mCSB_2" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 671px;"><div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+<div class="dashboard_title">
+<div class="icon" id="assets_sidebar_Collapse">
+<i class="fas fa-chevron-left"></i>
+</div>
+</div>
+<div class="for_bg_color ">
+<h1>Asset Folder</h1>
+<ul class="Play_List3 scrollbar">
+<ul class="Play_List4 scrollbar">
+<li class="Play_1 1">
+<div class="playlist_div_1">
+<a href="javascript:void(0);"><i class="fas fa-play"></i>No folder found.</a>
+</div>
+</li>
+
+</ul> </ul>
+</div>
+</div></div><div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-minimal mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 0px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+
+<div class="col-md-9">
+<div class="row Playlist_maintance justify-content-between align-items-start">
+<div class="col-md-5 col-sm-6">
+<div class="Playlist_heading">
+<h2>Playlist Assets</h2>
+</div>
+</div>
+<div class="col-md-7 col-sm-6">
+<div class="Playlist_btn_area">
+<input type="submit" value="Send to Playlist" onclick="call();" class="playlist-page-button-47">
+<a class="upload_btn1" data-bs-toggle="modal" data-bs-target="#upload_file" style="cursor:pointer;">
+&nbsp;&nbsp;&nbsp;Upload
+<div class="up_icon"><i class="fas fa-upload"></i></div>
+</a>
+</div>
+</div>
+</div>
+<div id="asset" class="MixButton text-left  my-3 text-center-mobile btn-links-alternate">
+<button style="color: #3095b5;font-weight:400;" class="btn btn_design click_btn mb-2" type="button" data-filter="all" onclick="window.open('#','_self');">All</button>
+<button class="btn btn_design click_btn mb-2" type="button" data-filter=".video" onclick="window.open('#','_self');">Video</button>
+<button class="btn btn_design click_btn mb-2" type="button" data-filter=".image" onclick="window.open('#','_self');">Image</button>
+<button class="btn btn_design click_btn mb-2" type="button" data-filter=".document" onclick="window.open('#','_self');">Document</button>
+<button class="btn btn_design click_btn mb-2" type="button" data-filter=".templates" onclick="window.open('#','_self');">Templates</button>
+
+<hr>
+</div>
+<div class="all_img  justify-content-between scrollbar my-3 pe-3 ps-3">
+<style>
+                .img1:hover .playlist-asset-option-45 {
+                    display: flex !important;
+                }
+                .playlist-asset-option-45 {
+                    background-color: #ffffffd6;
+                    width: 100%;
+                    padding: 10px 0;
+                    bottom: 0;
+                    display: none !important;
+                    z-index: 1;
+                }
+                .playlist-asset-option-45 a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: #111;
+                    font-weight: 600;
+                }
+            </style>
+<div class="select_from w-100 mix video templates document">
+
+<label for="item_one" onclick="itemChecked(this, 305);">
+<div class="img1">
+<div class="plus_icon">
+
+<i style="font-size: 2.5rem;" class="fa-solid fa-square-check"></i>
+</div>
+<img src="https://displaylabcmsnew.s3.amazonaws.com/assets/andrea-de-santis-zwd435-ewb4-unsplash-241.jpg" class="img-fluid dash-img" alt>
+<div class="d-flex justify-content-center px-2 position-absolute playlist-asset-option-45">
+<a href="https://displaylabcmsnew.s3.amazonaws.com/assets/andrea-de-santis-zwd435-ewb4-unsplash-241.jpg" data-lightbox="roadtrip" target="_blank">
+<span class="px-3"><i class="fas fa-eye" aria-hidden="true"></i></span>
+</a>
+</div>
+</div>
+</label>
+<div class="border_check m-2">
+<input id="check-305" style="padding: 8px 8px;" class="form-check-input" type="checkbox" name="item[]" value="305" multiple>
+</div>
+</div>
+<style>
+                .img1:hover .playlist-asset-option-45 {
+                    display: flex !important;
+                }
+                .playlist-asset-option-45 {
+                    background-color: #ffffffd6;
+                    width: 100%;
+                    padding: 10px 0;
+                    bottom: 0;
+                    display: none !important;
+                    z-index: 1;
+                }
+                .playlist-asset-option-45 a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: #111;
+                    font-weight: 600;
+                }
+            </style>
+<div class="select_from w-100 mix video templates document">
+
+<label for="item_one" onclick="itemChecked(this, 304);">
+<div class="img1">
+<div class="plus_icon">
+
+<i style="font-size: 2.5rem;" class="fa-solid fa-square-check"></i>
+</div>
+<img src="https://displaylabcmsnew.s3.amazonaws.com/assets/growtika-f0JGorLOkw0-unsplash-740.jpg" class="img-fluid dash-img" alt>
+<div class="d-flex justify-content-center px-2 position-absolute playlist-asset-option-45">
+<a href="https://displaylabcmsnew.s3.amazonaws.com/assets/growtika-f0JGorLOkw0-unsplash-740.jpg" data-lightbox="roadtrip" target="_blank">
+<span class="px-3"><i class="fas fa-eye" aria-hidden="true"></i></span>
+</a>
+</div>
+</div>
+</label>
+<div class="border_check m-2">
+<input id="check-304" style="padding: 8px 8px;" class="form-check-input" type="checkbox" name="item[]" value="304" multiple>
+</div>
+</div>
+<script>
+    function itemChecked(element, id){
+        var checkbox = document.getElementById('check-'+id).checked;
+        if(checkbox){
+            document.getElementById('check-'+id).checked = false;
+        } else {
+            document.getElementById('check-'+id).checked = true;
+        }
+    }
+</script> </div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="for_bg_color hide_for_mobile sidebar-805">
+<h1>Asset Folder</h1>
+<ul class="Play_List4 scrollbar">
+<li class="Play_1 1">
+<div class="playlist_div_1">
+<a href="javascript:void(0);"><i class="fas fa-play"></i>No folder found.</a>
+</div>
+</li>
+
+</ul> </div>
+</div>
+</div>
+
+</div>
+
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<p>Copyright © 2023 Screen Application. </p>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+</section>
+<div class="modal fade" id="sendplaylist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<form action="#" method="POST">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Send to the playlist</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<input type="hidden" name="total_assets" id="total_assets" value="0">
+<select name="playlist" class="form-control select_field">
+<option>Choose Playlist</option>
+<option value="232">Test 3</option>
+<option value="231">test 2</option>
+<option value="230">test</option>
+</select>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<input type="hidden" id="send_screen_type" value>
+<script type="text/javascript">
+
+        function call(){
+            var checkboxes = document.getElementsByName('item[]');
+            var vals = "";
+            for (var i=0, n=checkboxes.length;i<n;i++) 
+            {
+                if (checkboxes[i].checked) 
+                {
+                    vals += ","+checkboxes[i].value;
+                }
+            }
+            if (vals) vals = vals.substring(1);
+            if(vals==""){
+           	        swal({
+  text: "You must choose at least one asset!",
+});
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			return false;
+            }
+            var total_assets = document.getElementById("total_assets").value=vals;
+            var playlist = 232;
+            $.post('#',{total_assets:total_assets,playlist:playlist});
+            setTimeout(function(){
+                window.open('#','_self');
+            },500);
+            
+        }   
+    </script>
+<script>
+function scrollWin() {
+  window.scrollTo(0, 500); 
+}
+</script>
+<script>
+  document.querySelector("#passeye").addEventListener('click', function() {
+    var classname = document.getElementById('passeye').className;  
+    
+    if(classname=="far fa-eye"){
+    document.getElementById('passeye').className="far fa-eye-slash"; 
+    document.getElementById('logpassword').type="password";  
+    }
+    else{
+    document.getElementById('passeye').className="far fa-eye";
+    document.getElementById('logpassword').type="text";    
+    }
+  });
+
+  document.querySelector("#conpasseye").addEventListener('click', function() {
+    var classname = document.getElementById('conpasseye').className;  
+    
+    if(classname=="far fa-eye"){
+    document.getElementById('conpasseye').className="far fa-eye-slash"; 
+    document.getElementById('logconpassword').type="password";  
+    }
+    else{
+    document.getElementById('conpasseye').className="far fa-eye";
+    document.getElementById('logconpassword').type="text";    
+    }
+  });
+</script>
+<script> 
+
+function profile_img(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function(e1) {
+// Class for big image
+$('.profile_img').attr('src', e1.target.result);
+$('.profile_img').hide();
+$('.profile_img').fadeIn(650);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
+</script>
+<script>
+document.querySelector("#profilepic").addEventListener('change', function() {
+var picpath = document.getElementById("uploadpropath").value; 
+var filedat = $('#profilepic').prop('files')[0];
+
+ var formdata = new FormData();
+ formdata.append('file', filedat);
+
+//alert(form_data);                             
+    $.ajax({
+        url: picpath, // <-- point to server-side PHP script 
+        dataType: 'text',  // <-- what to expect back from the PHP script, if anything
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: formdata,                         
+        type: 'post',
+        success: function(data){
+        $("#proalert").fadeIn();
+            setTimeout(function(){
+            $("#proalert").fadeOut();   
+            location.reload(); 
+            },2000);
+        }
+     });
+});
+</script>
+<script>
+    document.querySelector(".screenCountBtn").addEventListener("click",async e => {
+        swal("Your screen quota for this month is over. Purchase more screens.", {
+  buttons: {
+    cancel: "Close",
+    catch: {
+      text: "Buy More!",
+      value: "buy",
+    }
+  },
+})
+.then((value) => {
+  switch (value) {
+ 
+    case "defeat":
+      swal("Pikachu fainted! You gained 500 XP!");
+      break;
+ 
+    case "buy":
+      swal("This will open screen purchase page!");
+      break;
+ 
+    default:
+      return;
+  }
+});
+    })
+</script>
+<script>
+
+    
+    document.querySelectorAll(".customConfirm").forEach(item => {
+        item.addEventListener("click", async e => {
+       e.preventDefault();
+        // alert("OK")
+       let href =  e.currentTarget.href;
+       let text = e.currentTarget.dataset.customText
+       
+        let bool = await swal({
+  title: "Warning",
+  text,
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+});
+
+// console.log({bool})
+
+if (bool==true) {
+   window.location.href =href
+} else {
+    // alert("false")
+}
+
+
+    })
+    })
+    
+   
+</script>
+
+
+<link href="../assets/css/screen-css/widget.css" rel="stylesheet">
+<script src="../assets/js/screen-js/widget.js" type="text/javascript" async></script>
+
+
+<script src="../assets/js/screen-js/sweetalert.min.js"></script>
+<script src="../assets/js/screen-js/jquery.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="../assets/js/screen-js/jquery.nice-select.min.js"></script>
+
+
+
+<!--cdn-->
+<script src="https://displaylab.net/js/jquery-ui.js"></script>
+<!--cdn-->
+
+
+<script src="../assets/js/screen-js/lightbox.min.js"></script>
+<script src="../assets/js/screen-js/owl.carousel.min.js"></script>
+<script src="../assets/js/screen-js/jquery-ui.custom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery.ui.mouse.min.js"></script>
+
+<script src="../assets/js/screen-js//Sortable.js"></script>
+
+<!--cdn-->
+<script src="https://displaylab.net/js/fullcalendar.js"></script>
+<!--cdn-->
+
+
+<script src="../assets/js/screen-js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="../assets/js/screen-js/dropzone.js"></script>
+
+<!--cdn-->
+<script src="https://displaylab.net/js/jquery-ui.min.js"></script>
+<script src="https://displaylab.net/js/reorder.js?cacheOverride=73132"></script>
+<script src="https://displaylab.net/js/customize-alert.js"></script>
+<script src="https://displaylab.net/js/slick.js"></script>
+<script src="https://displaylab.net/js/magnific-popup.js"></script>
+<script src="https://displaylab.net/js/script.js?cacheOverride=73132"></script>
+<!--cdn-->
+
+
+<script>
+function _(element)
+{
+    return document.getElementById(element);
+}
+
+_('select_file').onchange = function(event){
+
+    var fi = document.getElementById('select_file');
+
+    var fpgname = 'playlist';
+
+    var form_data = new FormData();
+
+    var image_number = 1;
+
+    var error = '';
+    
+    var s=0;
+    for(var cnt = 0; cnt < _('select_file').files.length; cnt++)  
+    {
+    var fsize = fi.files.item(cnt).size;      // THE SIZE OF THE FILE.
+    var s=s+fsize;       
+    }
+
+    if(s > 52428800){
+    error += '<div class="alert alert-danger">Files must be under 50 MB</div>';
+    // return false;    
+    } 
+    else{
+
+    for(var count = 0; count < _('select_file').files.length; count++)  
+    {
+
+    if(!['image/jpeg', 'image/png', 'video/mp4', 'image/gif', 'image/mov'].includes(_('select_file').files[count].type)){
+    error += '<div class="alert alert-danger"><b>'+image_number+'</b> Selected File must be .JPEG, .PNG, GIF and MP4 Only.</div>';
+    }else{
+    if(fpgname=="folder"){
+    form_data.append("folder", "pllist");
+    }
+    else if(fpgname=="playlist"){
+    //form_data.append("folder", "//");
+    form_data.append("folder", "0");
+    }
+    form_data.append("files[]", _('select_file').files[count]);
+            
+    }
+
+    image_number++;
+    }
+    }
+
+    if(error != '')
+    {
+        _('uploaded_image').innerHTML = error;
+
+        _('select_file').value = '';
+    }
+    else
+    {
+        _('progress_bar').style.display = 'block';
+
+        var ajax_request = new XMLHttpRequest();
+
+        ajax_request.open("POST", "#");
+
+        ajax_request.upload.addEventListener('progress', function(event){
+
+            var percent_completed = Math.round((event.loaded / event.total) * 100);
+
+            _('progress_bar_process').style.width = percent_completed + '%';
+
+            _('progress_bar_process').innerHTML = percent_completed + '% completed';
+
+             _('uploaded_image').innerHTML = '<div class="alert alert-primary"><img src="https://displaylab.net/icons/loading.gif" height="25" width="25">&nbsp;File is almost Uploading!</div> ';
+
+        });
+
+        ajax_request.addEventListener('load', function(event){
+
+            _('uploaded_image').innerHTML = '<div class="alert alert-success">Files Uploaded Successfully</div>';
+
+            _('select_file').value = '';
+
+            location.reload();
+
+        });
+
+        ajax_request.send(form_data);
+    }
+
+};
+
+</script>
+<script>
+$(document).ready(function(){
+  let test = $('.login-image-slider-class').slick({
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		arrows: false,
+cssEase: 'ease',
+dots: false,
+fade: true,
+easing: 'linear',
+lazyLoad: 'ondemand',
+autoplaySpeed: 5000,
+autoplay: true
+	});
+
+	console.log({test})
+});
+	
+		
+	</script>
+<script>
+       $(document).ready(function () {
+			 $('#sidebar-collapse-btn-two').on('click', function() {
+				$('#sidebar, #content').toggleClass('active');
+           $('.collapse.in').toggleClass('in');
+           $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+			 })
+
+       $('#sidebarCollapse').on('click', function () {
+           $('#sidebar, #content').toggleClass('active');
+           $('.collapse.in').toggleClass('in');
+           $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+       });
+       });
+
+       $(document).ready(function() {
+      $('select').niceSelect();
+      });
+
+    //   multi step
+
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 0)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
+
+   </script>
+<script>
+
+    $(document).ready(function () {
+     $("#playlist_sidebar").mCustomScrollbar({
+         theme: "minimal"
+     });
+
+     $('#playlist_sidebar_Collapse').on('click', function () {
+         $('#playlist_sidebar').toggleClass('active');
+         $('.collapse.in').toggleClass('in');
+         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+     });
+     });
+   
+ </script>
+<script>
+
+    $(document).ready(function () {
+     $("#assets_sidebar").mCustomScrollbar({
+         theme: "minimal"
+     });
+
+     $('#assets_sidebar_Collapse').on('click', function () {
+         $('#assets_sidebar').toggleClass('active');
+         $('.collapse.in').toggleClass('in');
+         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+     });
+
+        // send playlist auto modal open
+        send_screen_type();
+     });
+    // send playlist auto modal open
+    function send_screen_type(){
+        var send_screen_type = document.getElementById('send_screen_type').value;
+        if(send_screen_type == 'yes'){
+            setTimeout(function(){
+                $('#send_screen').modal({backdrop:'static', keyboard:false});
+                $('#send_screen').modal('show');
+            },500);
+        }
+    };
+
+ </script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+<script>
+  $(window).on('load', function () {
+    $('#loading').hide();
+  }) 
+</script>
+<script>
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+	</script>
+<script>
+
+	switch (window.location.pathname) {
+		case "/signup":
+		case "/":
+		case "/forgotpass":
+		case "/home":
+			document.getElementById("sidebar-collapse-btn-two").style.display="none"
+			break;	
+		default:
+			break;
+	}
+	
+</script>
+
+<script>
+const vidCtrlPlay = document.querySelector("#vidCtrlPlay")
+const vidCtrlPause = document.querySelector("#vidCtrlPause");
+const videoTarget = document.querySelector("#videoPlaylist")
+
+    vidCtrlPlay.addEventListener("click", e => {
+        videoTarget.play();
+        vidCtrlPlay.setAttribute("hidden", true);
+        vidCtrlPause.removeAttribute("hidden");
+    })
+    
+        vidCtrlPause.addEventListener("click", e => {
+        videoTarget.pause();
+        vidCtrlPause.setAttribute("hidden", true);
+        vidCtrlPlay.removeAttribute("hidden");
+    })
+</script>
+
+<script src="https://kit.fontawesome.com/3d286964c4.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.min.css" integrity="sha512-FEQLazq9ecqLN5T6wWq26hCZf7kPqUbFC9vsHNbXMJtSZZWAcbJspT+/NEAQkBfFReZ8r9QlA9JHaAuo28MTJA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<input type="hidden" id="addScreenStateId" />
+<input type="hidden" id="renewScreenId" />
+
+<div id="root"></div>
+<!-- <script type="module" crossorigin src="https://displaylab.net/assets/react/react-combined.js?revision=73132"></script>
+<link rel="stylesheet" href="https://displaylab.net//assets/react/react-combined.css?revision=73132">
+<script type="module" crossorigin src="https://displaylab.net/assets/react/react-helper-fn.js?revision=73132"></script> -->
+</body>
+</html>
+
+
+
+

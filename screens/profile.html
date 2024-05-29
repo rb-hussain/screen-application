@@ -1,0 +1,1275 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="base_url" value="#" />
+    <title>Screen Application</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="#"> -->
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/screen-css/fullcalendar.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/fullcalendar.print.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/style.css?cacheOverride=2024.1">
+    
+    <link rel="stylesheet" href="../assets/css/screen-css/lightbox.min.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/media.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/dropzone.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/animation.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/slick.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/customize-alert.css">
+    <link rel="stylesheet" href="../assets/css/screen-css/magnific-popup.css">
+    
+    </head>
+
+<body>
+
+
+<script>
+	document.querySelector("body").style.zoom = "90%";
+</script>
+<span class="sidebar-collapse-btn-2" id="sidebar-collapse-btn-two"><i class="fas fa-chevron-left"></i></span>
+
+<div class="modal fade" id="MoveToFolderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<form action="https://displaylab.net/Home/movetofolder" method="post">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Move your file</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<input type="hidden" name="assetid" id="assetid" value="0">
+<select name="folderid" class="form-control select_field" id>
+<option>Choose Folder</option>
+</select>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Save</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<div class="modal fade" id="MoveFolderToFolder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<form action="https://displaylab.net/Home/movefoldertofolder" method="post">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Move your Folder</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<input type="hidden" name="movefolder" id="movefolder" value="0">
+<input type="hidden" name="redirectpath" id="redirectpath" value>
+<select name="folderid" class="form-control select_field" id>
+<option>Choose Folder</option>
+</select>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Save</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<div class="modal fade" id="sendToPlaylistModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<form action="https://displaylab.net/Home/sendtoplaylist" method="post">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Send this file to playlist</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<input type="hidden" name="assetid" id="assetid2" value="0">
+<select name="playlistid" class="form-control select_field" id>
+<option>Choose Playlist</option>
+<option value="232">Test 3</option>
+<option value="231">test 2</option>
+<option value="230">test</option>
+</select>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary">Save</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+
+<div class="modal fade" id="create_folder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Enter your folder name</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<form action="https://displaylab.net/Home/createfolder" method="post">
+<input type="hidden" name="folder_type" id="folder_type" value="Asset">
+<input type="text" name="folder_name" class="form-control mb-3" placeholder="Folder Name">
+<input type="submit" value="Create" class="cretae_folder_btn">
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="appModal" tabindex="-1" aria-labelledby="ActionappFolder" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 id="appalertmsg" style="display: none;">Successfully Saved..</h4>
+<button onClick="showAppForm('mainbody');" type="button" class="btn-close" style="background: #070707!important;padding-top: 2px!important;" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+</div>
+<div class="modal-body" id="mainbody" style="display:block;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top select_app_icon" src="https://displaylab.net/icons/app.png" style="height: 70px;width: 70px;" alt="Card image cap">
+<h4 class="app_headline" style="text-align:center;margin-bottom: 10px;">Select App</h4>
+<p style="text-align:center;line-height:16px!important;font-size:13px!important;">Customize your screen with a social media wall, video, or website</p>
+</center>
+<br>
+<center class="border-1" style="line-height: 1;">
+<div class="btn-group mr-2" role="group" aria-label="First group">
+<button onclick="showAppForm('facebookbody');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/facebook.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+<button onclick="showAppForm('instagrambody');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/instagram.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+<button onClick="showAppForm('youtubeform');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/youtube.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+<button onClick="showAppForm('twitterform');" style="background: transparent;border:0px;" type="button" class="btn"><img class="all_apps_icon" src="https://displaylab.net/icons/twitter.png" style="height: 50px;width: 50px;border-radius: 10px;" alt="Card image cap"></button>
+</div>
+</center>
+</div>
+<div class="modal-body" id="youtubeform" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/youtube.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<h5>youtube</h5>
+<br><br>
+<form action="javascript:void(0);">
+<div class="form-group">
+<input type="text" class="form-control cusmoin" id="name_youtube" name="name_youtube" placeholder="Enter name..">
+</div>
+<div class="form-group">
+<input type="text" class="form-control cusmoin" id="youtube_url" name="youtube_url" placeholder="Enter Url...">
+</div>
+<button type="button" onClick="AppPost('youtube_post');" class="btn-block customModalButton">Save</button>
+</form>
+</center>
+</div>
+<div class="modal-body" id="twitterform" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/twitter.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<h5 style="margin-top:10px;">twitter</h5>
+<br><br>
+<form action="javascript:void(0);" method="POST">
+<input type="hidden" name="twitter_wall" value="twitter_wall">
+<div class="form-group">
+<input type="text" class="form-control cusmoin" id="wall_name" name="wall_name" placeholder="wall name..">
+</div>
+<div class="form-group">
+<select class="form-control" id="post_type" name="post_type">
+<option value="hastag">Hastag</option>
+<option value="Profile">Profile</option>
+</select>
+</div>
+<div class="form-group">
+<select class="form-control" id="display_mode" name="display_mode">
+<option value="social_kiosk_view">Social Kiosk View</option>
+<option value="single_post_view">Single Post View</option>
+<option value="social_wall_view">Social Wall View</option>
+<option value="timeline_view">Timeline View</option>
+</select>
+</div>
+<div class="form-group">
+<select class="form-control" id="theme" name="theme">
+<option value="light_theme">Light Theme</option>
+<option value="dark_theme">Dark Theme</option>
+</select>
+</div>
+<button type="button" onClick="AppPost('twitter_wall');" class="btn-block customModalButton">Save</button>
+</form>
+</center>
+</div>
+<div class="modal-body" id="facebookbody" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/facebook.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<br><br>
+<a href="javascript:void();">
+<button type="button" class="btn btn-block" style="background:#1b62ff!important;color: #fff!important;border: 1px solid #1b62ff!important;height:36px;border-radius: 5px;">Continue with facebook</button>
+</a>
+</center>
+</div>
+<div class="modal-body" id="instagrambody" style="display:none;">
+<center class="border-1" style="line-height: 1;">
+<img class="card-img-top selected_icon" src="https://displaylab.net/icons/instagram.png" style="height: 50px;width: 50px;" alt="Card image cap">
+<br><br>
+<a href="javascript:void();">
+<button type="button" class="btn btn-block" style="background:#1b62ff!important;color: #fff!important;border: 1px solid #1b62ff!important;height:36px;border-radius: 5px;">Continue with instagram</button>
+</a>
+</center>
+</div>
+<div class="modal-footer">
+<br>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="create_playlist" tabindex="-1" aria-labelledby="ActionFolder" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="ActionFolder">Create your playlists</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body create_folder_form">
+<form id="folderactionform" action method="post">
+<input type="hidden" name="reloc" id="reloc" value>
+<input type="hidden" name="foldid" id="foldid123" value="0">
+<input type="hidden" name="folder_type" id="folder_type1234" value>
+<input type="text" name="folder_name" id="folder_name" class="form-control mb-3" placeholder="Enter playlist name" required>
+<input type="submit" value="Create" class="cretae_folder_btn">
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    function callMove(assetid){
+        document.getElementById("assetid").value=assetid;
+        $('#MoveToFolderModal').modal('show'); 
+
+    }
+    function callMoveFolder(folder, redirectpath){
+        document.getElementById("movefolder").value=folder;
+        document.getElementById("redirectpath").value=redirectpath;
+        $('#MoveFolderToFolder').modal('show'); 
+
+    }
+
+     function sendToplaylist(assetid){
+        document.getElementById("assetid2").value=assetid;
+        $('#sendToPlaylistModal').modal('show'); 
+
+    }
+
+    function callCreateFol(data){
+        if(data=="Asset"){
+        var textval = "Folder"; 
+        var typetval = "Asset";
+        var modalid = "#create_playlist";    
+        }
+        else if(data=="Playlist"){
+        var textval = "Playlist";   
+        var typetval = "Playlist";
+        var modalid = "#create_playlist";  
+        }
+        else if(data=="AppModal"){
+        var textval = "";   
+        var typetval = "";
+        var modalid = "#appModal";    
+        }
+
+        document.getElementById("folder_type1234").value=typetval;
+        document.getElementById("folderactionform").action="https://displaylab.net/Home/createfolder";
+        document.getElementById("ActionFolder").innerHTML="Create your "+textval+"s";
+        document.getElementById("folder_name").placeholder="Enter "+textval+" name";
+        $(modalid).modal('show'); 
+    }
+
+
+    function callEditFol(name,data,foltype,reloc){
+        if(foltype=="Asset"){
+        var textval = "Folder";    
+        }
+        else if(foltype=="Playlist"){
+        var textval = "Playlist";    
+        }
+        document.getElementById("folderactionform").action="https://displaylab.net/Home/editfolder";
+        document.getElementById("foldid123").value=data;
+         document.getElementById("folder_type1234").value=foltype;
+        document.getElementById("folder_name").value=name;
+        document.getElementById("reloc").value=reloc;
+        document.getElementById("ActionFolder").innerHTML="Edit your "+textval+" name";
+       
+        $('#create_playlist').modal('show'); 
+    }
+    
+</script>
+<script type="text/javascript">
+    function setAnimation(id){
+        path = "https://displaylab.net/Home/updateAnimation";
+        animation = document.getElementById('animationsel').value;
+        // alert(animation);
+        // return false;
+        $.get(path,{id:id, animation:animation});
+        // return false;
+        setTimeout(function(){
+        location.reload();
+        },1000);
+    }
+</script>
+<input type="hidden" id="updateorder" value="https://displaylab.net/Home/updateorder">
+<input type="hidden" id="savethumbnail" value="https://displaylab.net/Home/savethumbnail">
+<script type="text/javascript">
+    function showAppForm(data){
+    if(data=="youtubeform"){
+    $('#'+data).show(); 
+    $('#twitterform').hide();
+    $('#mainbody').hide();
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();   
+    }
+    else if(data=="twitterform"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#mainbody').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();  
+    } 
+    else if(data=="facebookbody"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#mainbody').hide(); 
+    $('#twitterform').hide();
+    $('#instagrambody').hide();  
+    } 
+    else if(data=="instagrambody"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#mainbody').hide(); 
+    $('#twitterform').hide();
+    $('#facebookbody').hide();  
+    }
+    else if(data=="mainbody"){
+    $('#'+data).show(); 
+    $('#youtubeform').hide();
+    $('#twitterform').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();  
+    }  
+    }
+</script>
+<script type="text/javascript">
+    function AppPost(postfor){
+    if(postfor=="youtube_post"){
+
+    var name_youtube = document.getElementById('name_youtube').value;
+    var youtube_url = document.getElementById('youtube_url').value;
+
+    $.post('https://displaylab.net/Home/'+postfor,{name_youtube:name_youtube,youtube_url:youtube_url});
+
+    $('#mainbody').show(); 
+    $('#youtubeform').hide();
+    $('#twitterform').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();
+
+    document.getElementById('name_youtube').value=" ";
+    document.getElementById('youtube_url').value=" ";
+
+    $('#appalertmsg').fadeIn();
+    setTimeout(function(){
+    $('#appalertmsg').fadeOut();    
+    },1000);
+    }
+    else if(postfor=="twitter_wall"){
+
+    var wall_name = document.getElementById('wall_name').value;
+    var post_type = document.getElementById('post_type').value;
+    var display_mode = document.getElementById('display_mode').value; 
+    var theme = document.getElementById('theme').value;
+
+    $.post('https://displaylab.net/Home/'+postfor,{wall_name:wall_name,post_type:post_type,display_mode:display_mode,theme:theme});
+
+    $('#mainbody').show(); 
+    $('#youtubeform').hide();
+    $('#twitterform').hide(); 
+    $('#facebookbody').hide();
+    $('#instagrambody').hide();
+
+    document.getElementById('wall_name').value=" ";
+    document.getElementById('post_type').value=" ";
+    document.getElementById('display_mode').value=" "; 
+    document.getElementById('theme').value=" ";
+
+    $('#appalertmsg').fadeIn();
+    setTimeout(function(){
+    $('#appalertmsg').fadeOut();    
+    },1000);
+    }
+        
+    }
+</script>
+<script type="text/javascript">
+  function duplicateFolder(id){
+  $.get('https://displaylab.net/Home/duplicateFolder', {id:id});
+  location.reload();  
+  }
+</script>
+
+<div class="modal fade" id="upload_file" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<span class="pull-left"><h5 class="modal-title" id="exampleModalLongTitle">Upload File</h5></span>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+</div>
+<div class="modal-body create_folder_form">
+<label for="select_file" class="click-to-upload" tabindex="-1">Click To Upload</label>
+<input type="file" id="select_file" class="form-control" multiple hidden />
+<h6 class="fs-6 text pt-2" style="font-size: 12px!important;opacity: 1;
+    letter-spacing: 0.3px;">* Upload File Size should be limited to 50MB</h6>
+<div class="progress" id="progress_bar" style="display:none;margin-top: 14px; ">
+<div class="progress-bar" id="progress_bar_process" role="progressbar" style="width:0%">0%</div>
+</div>
+<div id="uploaded_image" class="row" style="margin-top: 10px;"></div>
+</div>
+</div>
+</div>
+</div>
+
+<input type="hidden" name="useridsession" id="useridsession" value="83">
+<section class="dashboard_area">
+  
+<div class="sidebar_content">
+<div id="sidebar" class="sidebar d-flex flex-column justify-content-between">
+
+  <div>
+    <div class="dashboard_title">
+    <div>
+    <h1><a href="#" style="color:#fff; text-decoration: none;">Screen Application</a></h1>
+    
+    </div>
+    <div class="icon" id="sidebarCollapse">
+    <i class="fas fa-chevron-left"></i>
+    </div>
+    </div>
+    <div class="main_sidebar">
+    <div class="search">
+    <form action="#" method="post">
+    <input type="text" name="search" placeholder="Search">
+    <div class="icon">
+    <i class="fas fa-search"></i>
+    </div>
+    </form>
+    </div>
+    </div>
+    <ul id="accordionFlushExample">
+    <li><a href="dashboard.html"><h3>Dashboard</h3></a> </li>
+    <li><a href="screen.html"> Screen</a> </li>
+    <li>
+    <div class="accordion sidebar_accordion accordion-flush">
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar_accordion" aria-expanded="false" aria-controls="flush-collapseOne">
+    <!-- <span></span> -->
+    <h3>Assets / Template</h3>
+    </button>
+    </h2>
+    <div id="sidebar_accordion" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div class="accordion-body">
+    <ul>
+    <li>
+    <a href="#">
+    Assets
+    </a>
+    </li>
+    <li>
+    <a href="javascript:void(0);" onclick="callCreateFol('AppModal');">
+    Apps
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    Template
+    </a>
+    </li>
+    </ul>
+    <div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </li>
+    
+    <li>
+    <div class="accordion sidebar_accordion accordion-flush">
+    <div class="accordion-item">
+    <span></span> <h2 class="accordion-header" id="flush-headingTwo">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar_accordion-2" aria-expanded="false" aria-controls="flush-collapseOne">
+    <span></span>
+    <h3>Playlists Menu</h3>
+    </button>
+    </h2>
+    <div id="sidebar_accordion-2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+    <div class="accordion-body">
+    <ul>
+    <li>
+    <a href="#"> Playlists</a>
+    </li>
+    <li>
+    <a href="#">Saved Template</a>
+    </li>
+    <li>
+    <a href="#"> Running Playlist</a>
+    </li>
+    </ul>
+    <div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </li>
+    <li> <a href="#"> Schedule</a> </li>
+    </ul>
+    </div>
+    <div class="signout text-center py-3">
+      <a href="#"><i class="fas fa-sign-out-alt"></i>Log out</a>
+      </div>
+      <div class="signout text-center py-3">
+      <div class="text-center m-0" style="display:flex;flex-wrap: wrap;justify-content:center; ">
+      <a style="color: #625e5e;font-size: 16px;padding:0; width:100%;margin-right: 6px;" class="helper-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" href="#offcanvasExample">Help</a>
+      <div>
+      <a href="#" class="helper-btn" style="font-size: 14px;color: #625e5e; padding: 0;margin-left: 20px;
+      margin-right: 8px;">Privacy Policy</a> <span style="color: #606060;font-weight: 800;">|</span> <a href="#" class="helper-btn" style="font-size: 14px;color: #625e5e;padding:0; padding-left:8px;">Terms & condition</a>
+      </div>
+      </div>
+      <span style="color: #3095B5;font-size: 14px;font-weight: bold;">Copyright © 2024 Screen Application. <br/>All rights reserved.</span><br/>
+      
+      
+      
+      </div>
+</div>
+<div id="content" class="content_area">
+
+  <div class="main_header">
+    <div class="row m-0 align-items-center">
+    <div class="col-6 col-sm-4">
+    <div class="left_header1">
+    <h2>Profile</h2>
+    </div>
+    </div>
+    
+    <div class="col-6 col-sm-4 m-auto mobile_hide">
+    
+    </div>
+    <div class="col-6 col-sm-4">
+    
+    <div class="header_right_side">
+    <div class="content">
+    <h4>Good Afternoon</h4>
+    </div>
+    <a href="profile.html" class="top-profile-thumbnail">
+    Profile
+    </a>
+    
+    </div>
+    </div>
+    </div>
+    
+    </div>
+
+
+
+<div class="main_content_area">
+<div class="row">
+<div class="col-sm-11 p-0 mt-4">
+</div>
+</div>
+<div class="row form_row margin">
+<div class="col-sm-7 left">
+<form action="#" method="POST">
+<div class="first_input_row row">
+<div class="col-6">
+<label for="text"><b>First Name</b></label>
+<input type="text" class="form-control" name="first_name" value="Rabi" autocomplete="off" placeholder="Enter your first name">
+</div>
+<div class="col-6">
+<label for="text"><b>Last Name</b></label>
+<input type="text" class="form-control" name="last_name" value="Huusain" autocomplete="off" placeholder="Enter your last name">
+</div>
+</div>
+<div class="Email_id">
+<label for="text"><b>Email ID</b></label>
+<input type="email" class="form-control" value="haxawoy118@cgbird.com" autocomplete="off" placeholder="Enter your email address." readonly>
+</div>
+<div class="Mobile_Number">
+<label for="text"><b>Mobile Number</b></label>
+<input type="tel" class="form-control" name="ph_no" value="03052319406" autocomplete="off" placeholder="Enter your mobile no.">
+</div>
+<div class="Address">
+<label for="text"><b>Company Name</b></label>
+<input type="text" class="form-control" name="company_name" value autocomplete="off" placeholder="Company Name">
+</div>
+<div class="Address">
+<label for="text"><b>Address</b></label>
+<input type="text" class="form-control" name="address" value autocomplete="off" placeholder="Enter your address">
+</div>
+<div class="row" style="margin-top: 12px;">
+<div class="col-md-4 col-12">
+<div class="City">
+<label for="text"><b>City</b></label>
+<input type="text" class="form-control" name="city" value autocomplete="off" placeholder="Enter your city">
+</div>
+</div>
+<div class="col-md-3 col-12">
+<div class="State">
+<label for="text"><b>State</b></label>
+<input type="text" class="form-control" name="state" value autocomplete="off" placeholder="Enter your state">
+</div>
+</div>
+<div class="col-md-4 col-12">
+<div class="Zipcode">
+<label for="text"><b>Zipcode</b></label>
+<input type="text" class="form-control" name="zipcode" value autocomplete="off" placeholder="Enter your zipcode">
+</div>
+</div>
+</div>
+<div class="save_profile_btn">
+<button type="submit" class="btn ">Save Profile</button>
+</div>
+</form>
+<form action="#" method="POST">
+<div class="Old_Pass">
+<label for="text"><b>Old Password</b></label>
+<input type="password" name="old_password" class="form-control" autocomplete="off">
+</div>
+<div class="first_input_row row">
+<div class="col-6">
+<label for="text"><b>New Password</b></label>
+<input type="password" name="new_password" class="form-control" autocomplete="off">
+</div>
+<div class="col-6">
+<label for="text"><b>Repeat Password</b></label>
+<input type="password" name="rpt_password" class="form-control" autocomplete="off">
+</div>
+</div>
+<div class="update_pass_btn">
+<button type="submit" class="btn ">Update Password</button>
+</div>
+</form>
+</div>
+
+<div class="col-sm-4 right right_side_content">
+<div class="right_content bg">
+<div class="img_part">
+<div id="proalert" class="alert alert-success" role="alert" style="display:none;">
+Your profile picture has been saved!
+</div>
+<div class="img">
+<a href="#">
+<img src="#/default.png" alt class="profile_img">
+</a>
+</div>
+<div class="upload_btn1 profile_change">
+Change
+<form>
+<input type="hidden" id="uploadpropath" value="#/profilepicsave">
+<input type="file" id="profilepic" name="file" onChange="profile_img(this)">
+<div class="up_icon"><i class="fas fa-upload"></i></div>
+</form>
+</div>
+<div class="heading">
+<h3>Rabi Huusain</h3>
+<!-- <h4><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="472f263f2630283e76767f072420252e35236924282a">[email&#160;protected]</a></h4> -->
+</div>
+</div>
+<div class="payments">
+<h3>Membership</h3>
+<span></span>
+</div>
+<div class="membership pt-2">
+
+<p>Your <b>"Basic"</b> subscription plan started on <b>May 28, 2024</b> and your membership will expire on <b>June 04, 2024</b>.</p> <span></span>
+</div>
+
+
+
+
+
+<div class="add_payment">
+<p><a href="subscription.html">Membership Plans</a></p>
+</div>
+
+<div class="membership pt-2">
+<span></span>
+</div>
+<div class="accordion accordion-flush" id="devices-acd-parent">
+<div class="accordion-item" style="background:transparent;">
+<h2 class="accordion-header" id="devices-child-heading">
+<button class="accordion-button collapsed" style="color: rgb(0, 85, 130);font-weight: 500;" type="button" data-bs-toggle="collapse" data-bs-target="#devices-target" aria-expanded="false" aria-controls="purchased-target">
+Available screen 1 out of 1 </button>
+</h2>
+<div id="devices-target" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne">
+<div class="accordion-body px-0">
+<div class="table-responsive">
+<table class="table" style="border-collapse:separate;">
+<thead class="thead-dark">
+<tr class="bg-info" style="background-color: #f4f5f9 !important;border-bottom: transparent;">
+<th scope="col" class="align-middle" style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;background-color: #eb5427!important;color: #fff;">Screen</th>
+<th scope="col" class="align-middle" style="background-color: #eb5427!important;color: #fff;">Start Date</th>
+<th scope="col" class="align-middle" style="background-color: #eb5427!important;color: #fff;">End Date</th>
+<th scope="col" class="align-middle" style="background-color: #eb5427!important;color: #fff;">Status</th>
+<th scope="col" class="align-middle" style="border-top-right-radius: 6px;border-bottom-right-radius: 6px;background-color: #eb5427!important;color: #fff;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e3e3e3;">
+<th class="align-middle">Screen1</th>
+<td class="align-middle">May 28, 2024</td>
+<td class="align-middle">June 04, 2024</td>
+<td class="align-middle">Unused</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-12">
+<p>Copyright © 2023 Display Lab. </p>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+</div>
+
+</section>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function scrollWin() {
+  window.scrollTo(0, 500); 
+}
+</script>
+<script>
+  document.querySelector("#passeye").addEventListener('click', function() {
+    var classname = document.getElementById('passeye').className;  
+    
+    if(classname=="far fa-eye"){
+    document.getElementById('passeye').className="far fa-eye-slash"; 
+    document.getElementById('logpassword').type="password";  
+    }
+    else{
+    document.getElementById('passeye').className="far fa-eye";
+    document.getElementById('logpassword').type="text";    
+    }
+  });
+
+  document.querySelector("#conpasseye").addEventListener('click', function() {
+    var classname = document.getElementById('conpasseye').className;  
+    
+    if(classname=="far fa-eye"){
+    document.getElementById('conpasseye').className="far fa-eye-slash"; 
+    document.getElementById('logconpassword').type="password";  
+    }
+    else{
+    document.getElementById('conpasseye').className="far fa-eye";
+    document.getElementById('logconpassword').type="text";    
+    }
+  });
+</script>
+<script> 
+
+function profile_img(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function(e1) {
+// Class for big image
+$('.profile_img').attr('src', e1.target.result);
+$('.profile_img').hide();
+$('.profile_img').fadeIn(650);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
+</script>
+<script>
+document.querySelector("#profilepic").addEventListener('change', function() {
+var picpath = document.getElementById("uploadpropath").value; 
+var filedat = $('#profilepic').prop('files')[0];
+
+ var formdata = new FormData();
+ formdata.append('file', filedat);
+
+//alert(form_data);                             
+    $.ajax({
+        url: picpath, // <-- point to server-side PHP script 
+        dataType: 'text',  // <-- what to expect back from the PHP script, if anything
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: formdata,                         
+        type: 'post',
+        success: function(data){
+        $("#proalert").fadeIn();
+            setTimeout(function(){
+            $("#proalert").fadeOut();   
+            location.reload(); 
+            },2000);
+        }
+     });
+});
+</script>
+<script>
+    document.querySelector(".screenCountBtn").addEventListener("click",async e => {
+        swal("Your screen quota for this month is over. Purchase more screens.", {
+  buttons: {
+    cancel: "Close",
+    catch: {
+      text: "Buy More!",
+      value: "buy",
+    }
+  },
+})
+.then((value) => {
+  switch (value) {
+ 
+    case "defeat":
+      swal("Pikachu fainted! You gained 500 XP!");
+      break;
+ 
+    case "buy":
+      swal("This will open screen purchase page!");
+      break;
+ 
+    default:
+      return;
+  }
+});
+    })
+</script>
+<script>
+
+    
+    document.querySelectorAll(".customConfirm").forEach(item => {
+        item.addEventListener("click", async e => {
+       e.preventDefault();
+        // alert("OK")
+       let href =  e.currentTarget.href;
+       let text = e.currentTarget.dataset.customText
+       
+        let bool = await swal({
+  title: "Warning",
+  text,
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+});
+
+// console.log({bool})
+
+if (bool==true) {
+   window.location.href =href
+} else {
+    // alert("false")
+}
+
+
+    })
+    })
+    
+   
+</script>
+
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://displaylab.net/js/jquery.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="https://displaylab.net/js/jquery.nice-select.min.js"></script>
+<script src="https://displaylab.net/js/jquery-ui.js"></script>
+
+<script src="https://displaylab.net/js/lightbox.min.js"></script>
+<script src="https://displaylab.net/js/owl.carousel.min.js"></script>
+<script src="https://displaylab.net/js/jquery-ui.custom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery.ui.mouse.min.js"></script>
+
+<script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+<script src="https://displaylab.net/js/fullcalendar.js"></script>
+
+<script src="https://displaylab.net/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="https://displaylab.net/js/dropzone.js"></script>
+<script src="https://displaylab.net/js/jquery-ui.min.js"></script>
+
+<script src="https://displaylab.net/js/reorder.js?cacheOverride=89722"></script>
+<script src="https://displaylab.net/js/customize-alert.js"></script>
+<script src="https://displaylab.net/js/slick.js"></script>
+
+<script src="https://displaylab.net/js/magnific-popup.js"></script>
+
+<script src="https://displaylab.net/js/script.js?cacheOverride=89722"></script>
+
+<script>
+function _(element)
+{
+    return document.getElementById(element);
+}
+
+_('select_file').onchange = function(event){
+
+    var fi = document.getElementById('select_file');
+
+    var fpgname = 'profile';
+
+    var form_data = new FormData();
+
+    var image_number = 1;
+
+    var error = '';
+    
+    var s=0;
+    for(var cnt = 0; cnt < _('select_file').files.length; cnt++)  
+    {
+    var fsize = fi.files.item(cnt).size;      // THE SIZE OF THE FILE.
+    var s=s+fsize;       
+    }
+
+    if(s > 52428800){
+    error += '<div class="alert alert-danger">Files must be under 50 MB</div>';
+    // return false;    
+    } 
+    else{
+
+    for(var count = 0; count < _('select_file').files.length; count++)  
+    {
+
+    if(!['image/jpeg', 'image/png', 'video/mp4', 'image/gif', 'image/mov'].includes(_('select_file').files[count].type)){
+    error += '<div class="alert alert-danger"><b>'+image_number+'</b> Selected File must be .JPEG, .PNG, GIF and MP4 Only.</div>';
+    }else{
+    if(fpgname=="folder"){
+    form_data.append("folder", "");
+    }
+    else if(fpgname=="playlist"){
+    //form_data.append("folder", "//");
+    form_data.append("folder", "0");
+    }
+    form_data.append("files[]", _('select_file').files[count]);
+            
+    }
+
+    image_number++;
+    }
+    }
+
+    if(error != '')
+    {
+        _('uploaded_image').innerHTML = error;
+
+        _('select_file').value = '';
+    }
+    else
+    {
+        _('progress_bar').style.display = 'block';
+
+        var ajax_request = new XMLHttpRequest();
+
+        ajax_request.open("POST", "#");
+
+        ajax_request.upload.addEventListener('progress', function(event){
+
+            var percent_completed = Math.round((event.loaded / event.total) * 100);
+
+            _('progress_bar_process').style.width = percent_completed + '%';
+
+            _('progress_bar_process').innerHTML = percent_completed + '% completed';
+
+             _('uploaded_image').innerHTML = '<div class="alert alert-primary"><img src="#" height="25" width="25">&nbsp;File is almost Uploading!</div> ';
+
+        });
+
+        ajax_request.addEventListener('load', function(event){
+
+            _('uploaded_image').innerHTML = '<div class="alert alert-success">Files Uploaded Successfully</div>';
+
+            _('select_file').value = '';
+
+            location.reload();
+
+        });
+
+        ajax_request.send(form_data);
+    }
+
+};
+
+</script>
+<script type="text/javascript">
+// function deleteAsset(assetid){
+// var path = "#/deleteAssetpage/"+assetid;
+// $.get(path);
+// location.reload();
+// }
+
+</script>
+<script>
+$(document).ready(function(){
+  let test = $('.login-image-slider-class').slick({
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		arrows: false,
+cssEase: 'ease',
+dots: false,
+fade: true,
+easing: 'linear',
+lazyLoad: 'ondemand',
+autoplaySpeed: 5000,
+autoplay: true
+	});
+
+	console.log({test})
+});
+	
+		
+	</script>
+<script>
+       $(document).ready(function () {
+    //   $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //   });
+
+			 // aj 1409 - added the below block
+			 $('#sidebar-collapse-btn-two').on('click', function() {
+				$('#sidebar, #content').toggleClass('active');
+           $('.collapse.in').toggleClass('in');
+           $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+			 })
+
+       $('#sidebarCollapse').on('click', function () {
+           $('#sidebar, #content').toggleClass('active');
+           $('.collapse.in').toggleClass('in');
+           $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+       });
+       });
+
+       $(document).ready(function() {
+      $('select').niceSelect();
+      });
+
+    //   multi step
+
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 0)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    if (y[i].value == "") {
+      y[i].className += " invalid";
+      valid = false;
+    }
+  }
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; 
+}
+
+function fixStepIndicator(n) {
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  x[n].className += " active";
+}
+
+   </script>
+<script>
+
+    $(document).ready(function () {
+     $("#playlist_sidebar").mCustomScrollbar({
+         theme: "minimal"
+     });
+
+     $('#playlist_sidebar_Collapse').on('click', function () {
+         $('#playlist_sidebar').toggleClass('active');
+         $('.collapse.in').toggleClass('in');
+         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+     });
+     });
+   
+ </script>
+<script>
+
+    $(document).ready(function () {
+     $("#assets_sidebar").mCustomScrollbar({
+         theme: "minimal"
+     });
+
+     $('#assets_sidebar_Collapse').on('click', function () {
+         $('#assets_sidebar').toggleClass('active');
+         $('.collapse.in').toggleClass('in');
+         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+     });
+        send_screen_type();
+     });
+    function send_screen_type(){
+        var send_screen_type = document.getElementById('send_screen_type').value;
+        if(send_screen_type == 'yes'){
+            setTimeout(function(){
+                $('#send_screen').modal({backdrop:'static', keyboard:false});
+                $('#send_screen').modal('show');
+            },500);
+        }
+    };
+
+ </script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+<script>
+  $(window).on('load', function () {
+    $('#loading').hide();
+  }) 
+</script>
+<script>
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+	</script>
+<script>
+
+	switch (window.location.pathname) {
+		case "/signup":
+		case "/":
+		case "/forgotpass":
+		case "/home":
+			document.getElementById("sidebar-collapse-btn-two").style.display="none"
+			break;	
+		default:
+			break;
+	}
+	
+</script>
+<style>
+</style>
+<script>
+</script>
+<script>
+
+const vidCtrlPlay = document.querySelector("#vidCtrlPlay")
+const vidCtrlPause = document.querySelector("#vidCtrlPause");
+const videoTarget = document.querySelector("#videoPlaylist")
+
+    vidCtrlPlay.addEventListener("click", e => {
+        videoTarget.play();
+        vidCtrlPlay.setAttribute("hidden", true);
+        vidCtrlPause.removeAttribute("hidden");
+    })
+    
+        vidCtrlPause.addEventListener("click", e => {
+        videoTarget.pause();
+        vidCtrlPause.setAttribute("hidden", true);
+        vidCtrlPlay.removeAttribute("hidden");
+    })
+</script>
+<script src="https://kit.fontawesome.com/3d286964c4.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.min.css" integrity="sha512-FEQLazq9ecqLN5T6wWq26hCZf7kPqUbFC9vsHNbXMJtSZZWAcbJspT+/NEAQkBfFReZ8r9QlA9JHaAuo28MTJA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+
+<input type="hidden" id="addScreenStateId" />
+<input type="hidden" id="renewScreenId" />
+
+<div id="root"></div>
+<!-- <script type="module" crossorigin src="https://displaylab.net//assets/react/react-combined.js?revision=89722"></script>
+<link rel="stylesheet" href="https://displaylab.net//assets/react/react-combined.css?revision=89722">
+<script type="module" crossorigin src="https://displaylab.net//assets/react/react-helper-fn.js?revision=89722"></script> -->
+</body>
+</html>

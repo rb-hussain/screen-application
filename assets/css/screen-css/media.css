@@ -1,0 +1,2125 @@
+@media (max-width: 1440px) {
+	.second_col .play_send a {
+		padding: 8px 20px;
+		font-size: 18px;
+		margin-right: 15px;
+	}
+	.first_col .playheading {
+		font-size: 18px;
+		margin-right: 15px;
+	}
+	.first_col .animation {
+		font-size: 15px;
+		line-height: 2;
+		margin-right: 15px;
+		padding-left: 15px;
+		padding-right: 20px;
+	}
+}
+@media (max-width: 1199px) {
+	/* aj 2109 */
+	.dashboard-add-screen-btn {
+		padding: 0px 7px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+	}
+
+	/* aj 2109 */
+	.main_header .upload_btn1 {
+		width: min-content;
+		padding-left: unset;
+		cursor: pointer;
+		padding-right: unset;
+		font-size: 14px;
+		padding: 10px;
+	}
+
+	/* aj 2109 */
+	.first_col .animation {
+		height: 38px;
+	}
+	/* aj 2109 */
+	.second_col .play_send a {
+		font-size: 16px;
+	}
+
+	/* aj 2109 */
+	.preview_btn a {
+		padding: 9px 10px;
+	}
+
+	/* aj 2109 */
+	.preview_btn a {
+		font-size: 16px;
+		height: 38px;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	/* aj 2109 */
+	.preview_btn a i {
+		position: relative;
+		top: 1px;
+		right: 5px;
+	}
+
+	/* aj 2109 */
+	.second_col .play_Time {
+		margin-left: 7px;
+	}
+
+	/* aj 2109 */
+	.Playlist_create a {
+		/*margin-left: 10px;*/
+		font-size: 16px;
+		height: 38px;
+		padding-left: 0;
+		padding-right: 0;
+		line-height: 2;
+	}
+
+	/* aj 2109 */
+	.second_col .play_Time p {
+		font-size: 14px;
+	}
+
+	/* aj 2109 */
+	.second_col .play_Time .PlayTime {
+		height: 38px;
+	}
+
+	/* aj 2109 */
+	.second_col .play_Time span {
+		font-size: 11px;
+	}
+
+	/* aj 2109 */
+	#content {
+		width: 100%;
+	}
+}
+@media (max-width: 1024px) {
+	.dashboard_page .first_col {
+		flex-wrap: wrap;
+	}
+	.dashboard_page .first_col .playheading {
+		margin-bottom: 15px;
+	}
+	.first_col h1 {
+		width: 100%;
+	}
+	.Playlist_create {
+		margin-top: 40px;
+	}
+	.mobile_view {
+		display: none;
+	}
+	.recent_item {
+		height: 120px;
+	}
+	.img_down_content i,
+	.img_down_content h4 {
+		font-size: 13px;
+	}
+	#content.active {
+		width: calc(100% - 0px);
+	}
+}
+@media (max-width: 800px) {
+	.add_payment_header h2 {
+		margin-left: 50px;
+	}
+	#content {
+		width: 100%;
+	}
+
+	/* aj 2609 */
+	.upload_btn1 {
+		/* padding: 12px 56px; */
+		/* padding-right: 45px; */
+	}
+
+	/* aj 1609 */
+	.upload_btn2 {
+		padding: 10px;
+	}
+	.assets_btn .create_btm {
+		margin-left: 15px;
+	}
+	.fc-button-next,
+	.fc-button-prev {
+		padding: 0;
+	}
+	.fc-header td {
+		padding: 15px 5px 0px;
+	}
+	.fc-header-title h2 {
+		font-size: 18px;
+	}
+	.Playlist_create {
+		margin-top: 0px;
+	}
+	.dashboard_page .Playlist_create {
+		margin-top: 40px;
+	}
+	/* aj 0709 */
+	.all_img {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		position: relative;
+		height: 265px !important;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		padding: 0 15px 0 0;
+	}
+
+	/* aj 0809 */
+	.first_col .animation {
+		margin-left: initial;
+	}
+	/* aj 0809 */
+	.for_bg_color ul li {
+		padding: 10px 5px;
+	}
+	/* aj 2109 */
+	.for_bg_color ul li a {
+		font-size: 12px;
+	}
+
+	/* aj 1209 */
+	.social-icons div img {
+		width: 32px;
+	}
+
+	/*.max-tab-hide {*/
+	/*    display: none;*/
+	/*}*/
+
+	.for_bg_color ul li a {
+		font-size: 12px;
+	}
+}
+@media (max-width: 896px) {
+	/* aj 1609 */
+	#sidebar.active #sidebarCollapse {
+		right: 15px;
+		background-color: #fff;
+	}
+	#sidebar.active #sidebarCollapse i {
+		color: #6c6c6c !important;
+	}
+	/* aj 1609 */
+	.dashboard_title .icon {
+		/* right: -30px; */
+	}
+	.animation {
+		/* width: 105px !important; */
+	}
+	/* aj 1909 */
+	.second_col .play_send a {
+		margin-right: 8px;
+		display: inline-block;
+	}
+	.preview_btn a {
+		padding: 10px 17px;
+	}
+	/* aj 1609 */
+	.signin {
+		width: 100%;
+	}
+
+	/* .login_bg {
+		display: none;
+	} */
+	/* aj 1609 */
+	.dashboard_title {
+		justify-content: flex-start;
+		padding-left: 15px;
+	}
+
+	/* aj 1609 */
+	.mCS_img_loaded {
+		width: 170px;
+	}
+	/* aj 1609 */
+	.main_header h2 {
+		margin-left: 50px;
+	}
+
+	/* aj 1609 */
+	.sidebar-collapse-btn-2 {
+		left: 20px;
+	}
+
+	/* aj 0710-02 */
+	.sidebar_accordion h3 {
+		font-size: 20px;
+	}
+
+	/* aj 1609 */
+	.for_bg_color ul {
+		line-height: 1.2rem;
+	}
+
+	/* aj 2109 */
+	.playlist_div_1 {
+		padding-left: 10px;
+		font-size: 12px !important;
+	}
+
+	/* aj 1909 */
+	.playlist-page-title-2 {
+		width: 100%;
+	}
+	/* aj 1909 */
+	.Playlist_heading {
+		width: 100%;
+	}
+	/* aj 1909 */
+	.playlist-asset-1 .nice-select {
+		width: 100% !important;
+		margin-bottom: 10px !important;
+	}
+
+	/* aj 1909 */
+	.playlist-asset-1 .nice-select .list {
+		width: 100%;
+	}
+
+	.playlist-page-title-2 {
+		width: 100%;
+	}
+	/* aj 2009 */
+	.login_bg {
+		display: none;
+	}
+
+	/* aj 2109 */
+
+	.Play_List4 .playlist_div_1 i {
+		margin-right: 4px;
+		color: #525252 !important;
+	}
+	/* aj 2609 */
+	.sidebar .signout {
+		/*bottom: unset;*/
+	}
+
+	/* aj 2609 */
+	.btn-links-alternate .btn_design {
+		border: 1px solid #3095b5;
+	}
+}
+@media (max-width: 767px) {
+	#sidebar {
+		position: static;
+	}
+	.mobile_view {
+		display: inherit;
+	}
+
+	.login_bg {
+		display: none;
+	}
+	.login_form h1 {
+		font-size: 50px;
+	}
+	.login_form h2 {
+		font-size: 25px;
+	}
+	.login_form form input {
+		padding: 8px 5px;
+		padding-left: 50px;
+	}
+	.login_form h3 {
+		font-size: 16px;
+	}
+	.login_form form input[type="submit"] {
+		font-size: 18px;
+	}
+	.header_right_side1 .content {
+		width: 50%;
+		color: #777888;
+		margin-right: 20px;
+	}
+	.header_right_side1 .content h4 {
+		font-size: 16px;
+	}
+	.header_right_side1 span {
+		width: 20px;
+		height: 20px;
+		font-size: 15px;
+	}
+	.header_right_side1 .content h1 {
+		font-size: 17px;
+	}
+	.btn_design {
+		font-size: 15px;
+	}
+	.all_btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		/*margin-bottom: 35px;*/
+		/*gap: 1px;*/
+	}
+	.first_btn .btn_1 a {
+		text-decoration: none;
+		background: #3095b5;
+		padding: 12px 4px;
+		padding-left: 50px;
+		color: #fff;
+		border-radius: 5px;
+		padding-right: 20px;
+		/*width:100%;*/
+		white-space:nowrap;
+	}
+	.second_btn .btn_2 a,
+	.third_btn .btn_3 a {
+		text-decoration: none;
+		background: #e0eff4;
+		padding: 12px 4px;
+		padding-left: 50px;
+		color: #3095b5;
+		border-radius: 5px;
+		padding-right: 20px;
+		/*width:100%;*/
+	}
+	.img_down_content {
+		margin-bottom: 20px;
+	}
+	.main_header h2 {
+		font-size: 20px;
+	}
+	.main_header .upload_btn1 {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		background: #3095b5;
+		color: #fff;
+		font-family: "Poppins";
+		margin: auto;
+	}
+	.owl-carousel .owl-nav .owl-prev span {
+		width: 30px;
+		height: 30px;
+		line-height: 26px;
+		top: -35px;
+		right: 45px;
+	}
+	.owl-carousel .owl-nav .owl-next span {
+		width: 30px;
+		height: 30px;
+		line-height: 26px;
+		top: -35px;
+	}
+	.second_col {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+		flex-wrap: wrap;
+	}
+	.second_col .play_Time {
+		position: relative;
+		margin-top: 0px;
+	}
+	.Playlist_create {
+		margin-top: 0;
+	}
+	.mobile_none {
+		display: none;
+	}
+	.Playlist_create a {
+		margin-left: 0;
+	}
+	.first_col h1 {
+		font-size: 20px;
+		width: auto;
+	}
+	/* aj 1609 */
+	.dashboard_title .icon {
+		/* right: -30px; */
+	}
+	.for_bg_color {
+		margin-top: 0px;
+	}
+	.Play_List5 .playlist_div_1 {
+		font-size: 15px;
+	}
+	.Playlist_maintance .Playlist_heading h2 {
+		font-size: 20px;
+	}
+	.Playlist_btn_area input[type="submit"] {
+		padding: 10px 15px;
+	}
+	.for_bg_color {
+		margin-top: 12px;
+	}
+	.Play_List4 .playlist_div_1 {
+		font-size: 16px;
+	}
+	.up_icon {
+		left: 15px;
+	}
+	.img1 {
+		height: 100px;
+	}
+	.hide_for_mobile {
+		display: none;
+	}
+	.view_for_mobile {
+		display: inherit;
+	}
+	.view_for_mobile .for_bg_color {
+		width: 100%;
+	}
+	.Play_List4,
+	.Play_List3 {
+		height: 300px;
+	}
+
+	#playlist_sidebar {
+		display: block !important;
+	}
+}
+@media (max-width: 575px) {
+	.main_div h4 {
+		font-size: 13px;
+	}
+
+	.main_div h5 {
+		font-size: 12px;
+	}
+
+	.add_payment_header h2 {
+		margin-left: 70px;
+	}
+	.playlist_content_area {
+		overflow: hidden;
+	}
+	.Playlist_maintance .Playlist_btn_area {
+		justify-content: start;
+	}
+	.second_col .play_Time .PlayTime {
+		padding-left: 23px;
+		padding-right: 23px;
+		width: 100%;
+		justify-content: center;
+		height: 45px;
+	}
+	.Playlist_create {
+		margin-top: 30px;
+		margin-left: 28px;
+	}
+	.second_col .play_send a {
+		padding: 8px 50px;
+	}
+
+	/* aj 1609 */
+	.second_col .play_send a {
+		margin-right: 0px;
+		display: inline-block;
+		width: 100%;
+	}
+	.first_col .preview_btn {
+		/* margin-top: 30px; */
+		margin-top: 10px;
+		/* margin-right: 15px; */
+		width: 48.5%;
+		text-align: center;
+	}
+	.select_from .img1,
+	.select_from .video_item {
+		margin-left: 0;
+	}
+	.mobile_visible {
+		display: inherit;
+		margin-top: 15px;
+	}
+	/* aj 2609 */
+	.preview_btn a {
+		margin-top: 0;
+		display: inline-block;
+		width: 100%;
+		margin-left: 0px;
+		height: 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.playlist_btn_row .mobile_visible {
+		display: inherit;
+		margin-top: 0px;
+	}
+	/* aj 1209 */
+	.mobile_visible .upload_btn1 {
+		height: 45px;
+		width: 100%;
+		margin-left: auto;
+	}
+	.owl-loaded .owl-stage-outer {
+		margin-top: 5px;
+	}
+	.main_content_area .row {
+	}
+	.sidebar ul li {
+		margin-top: 10px;
+	}
+	.sidebar ul li {
+		margin-left: 40px;
+	}
+	#sidebar ul li a {
+		font-size: 16px;
+	}
+	/* aj 2109 */
+	.sidebar_accordion h3 {
+		font-size: 16px;
+	}
+	.dashboard_title h1 {
+		font-size: 20px;
+	}
+	.dashboard_title p {
+		font-size: 14px;
+	}
+	.sidebar ul li a h3 {
+		font-size: 16px;
+	}
+	.assets_btn .create_btm {
+		margin-left: 20px;
+	}
+	.left {
+		padding: 10px;
+	}
+	.form_row {
+		flex-direction: column-reverse;
+	}
+	.main_div {
+		margin-top: 0 !important;
+	}
+	.accordion p {
+		font-size: 10px;
+	}
+	.accordion h4 {
+		font-size: 12px;
+	}
+	.Table_row .Date {
+		font-size: 10px;
+	}
+	.Table_row th {
+		font-size: 14px;
+		text-align: center;
+	}
+	.btn_design {
+		font-size: 15px;
+		padding-left: 10px;
+		padding-right: 0px;
+	}
+	/* aj 1609 */
+	.second_col .play_Time {
+		margin-top: 10px;
+		margin-left: 0;
+		/*  padding: 0 33px; */
+	}
+	/* aj 1609 */
+	.second_col .play_Time {
+		margin-left: 0px;
+		width: 48.5%;
+	}
+	.header_right_side .content {
+		width: 70%;
+		margin-right: 10px;
+	}
+	.header_right_side .img {
+		width: 30%;
+	}
+	#sidebar #sidebarCollapse {
+		transform: rotate(180deg);
+	}
+	.profile_page #sidebar #sidebarCollapse {
+		transform: rotate(180deg);
+		right: -90px;
+	}
+	/* aj 1609 */
+	#sidebar.active #sidebarCollapse {
+		transform: rotate(0deg);
+		right: 7px;
+		background: #fff;
+		color: #3095b5 !important;
+	}
+	#sidebar.active #sidebarCollapse i {
+		color: #3095b5 !important;
+	}
+	.signin {
+		width: 90%;
+	}
+	.dashboard_title .icon {
+		right: -35px;
+		color: #3095b5 !important;
+	}
+	#playlist_sidebar {
+		right: 0px;
+		top: 17%;
+	}
+	#playlist_sidebar .dashboard_title .icon {
+		right: 105%;
+		top: 40px;
+		border: 1px solid #3095b5 !important;
+	}
+	#assets_sidebar {
+		right: 0px;
+		top: 15%;
+	}
+	#assets_sidebar .dashboard_title .icon {
+		right: 117%;
+		top: 40px;
+		 border: 1px solid #fff !important;
+	}
+	/* aj 1609 */
+	.main_header h2 {
+		/* margin-left: 30px; */
+	}
+	.profile_page .main_header h2 {
+		margin-left: 35px;
+	}
+	/* aj 1909 */
+	.all_img {
+		grid-template-columns: repeat(3, 1fr);
+		height: 320px !important;
+		margin-top: 0 !important;
+	}
+	.first_col h1 {
+		font-size: 18px;
+	}
+	.main_header .upload_btn1 {
+		margin: auto;
+	}
+	.main_content_area .left_btn {
+		margin-top: 15px;
+	}
+	.header_right_side1 {
+	}
+	.main_header h2 {
+		font-size: 25px;
+	}
+	.owl-carousel .owl-nav .owl-prev span,
+	.owl-carousel .owl-nav .owl-next span {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+	}
+	.header_right_side .content h1 {
+		font-size: 18px;
+	}
+	.bg h2,
+	.first_col .playheading,
+	.Playlist_maintance .Playlist_heading h2,
+	.calander_title h1 {
+		font-size: 18px;
+	}
+	.table_data i {
+		margin-right: 5px;
+		font-size: 12px;
+	}
+	.table_data h5,
+	.Table_row .Playlist_name {
+		font-size: 10px !important;
+		margin: 0;
+	}
+	.Table_row .TV_icon i,
+	.Table_row .Trash i {
+		font-size: 13px;
+		width: 30px;
+		height: 30px;
+	}
+	.pen_icon i {
+		font-size: 16px;
+	}
+	.header_right_side1 .content h1,
+	.recent_file h2 {
+		font-size: 14px;
+	}
+	.all_btn {
+		margin-bottom: 5px;
+		gap: 1%;
+	}
+	.row_control,
+	.row_control1 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.Playlist_maintance .Playlist_heading h2 {
+		margin: 20px 0px;
+	}
+	.Create_schedule1 {
+		margin-top: 20px;
+	}
+	.recent_file .view_allfile {
+		text-align: start !important;
+		padding: 0;
+		margin-left: 10px;
+	}
+	.Assets_row {
+		margin-top: 25px;
+	}
+	.MixButton.text-left {
+		margin: 10px 0px 0px !important;
+	}
+	.second_col {
+		margin-bottom: 25px;
+	}
+	.Schedule_parent .Button_Parent {
+		width: 70%;
+		margin: auto;
+	}
+	.header_right_side1 .img {
+		width: 20%;
+	}
+	.for_bg_color {
+		margin-top: 30px;
+	}
+	#sidebar.active .content {
+		overflow: hidden;
+	}
+	.Portfollio .img1,
+	.video_item {
+	}
+	.assets_btn {
+		justify-content: start;
+	}
+	/* aj 2109 */
+	.mobile_hide {
+		display: none !important;
+	}
+	.recent_file h2 {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+	.recent_file_carousel .owl-stage-outer {
+		margin-top: 0;
+	}
+	.fc-header tr {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.fc-header-title h2 {
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.fc-header td {
+		font-size: 14px;
+	}
+	.Create_schedule1 .Create_schedule {
+		font-size: 14px;
+		font-weight: 400;
+		padding: 8px 10px;
+	}
+	.first_btn,
+	.second_btn {
+		margin-right: 0px;
+		width: 100%;
+	}
+	.third_btn {
+		width: 100%;
+	}
+	.playlist_btn_row .Playlist_create {
+		margin-top: 0;
+		margin-left: 0px;
+	}
+	.img1 {
+		height: 125px;
+	}
+	#playlist_sidebar {
+		display: block !important;
+	}
+	#playlist_sidebar .dashboard_title {
+		height: 0;
+	}
+	#assets_sidebar {
+		display: block !important;
+	}
+	#assets_sidebar .dashboard_title {
+		height: 0;
+	}
+	.second_col .play_send {
+		margin-top: 30px;
+		margin-right: 0px;
+	}
+	/* aj 1609 */
+	.second_col .play_send {
+		margin-top: 10px;
+		margin-right: 0px;
+		width: 48.5%;
+		text-align: center;
+	}
+	/* aj 2609 */
+	.first_col .animation {
+		margin-top: 15px;
+	}
+	/* aj 1609 */
+	.first_col .animation {
+		margin-left: 0px;
+		margin-right: 0;
+		width: 100% !important;
+	}
+	.dashboard_page .Playlist_create {
+		margin-top: 10px;
+	}
+	.Playlist_create.mobile_view {
+		margin-left: 35px;
+	}
+	/* aj 1609 */
+	.Playlist_create.mobile_view {
+		margin-left: 0;
+		width: 48.5%;
+		text-align: center;
+	}
+	/* aj 0809 */
+	.nice-select .list {
+		width: 100%;
+	}
+
+	/* aj 2609 */
+	.dashboard_page .first_col .playheading {
+		margin-bottom: 0px;
+		text-align: left;
+		width: 100%;
+		margin-top: 12px;
+		font-size: 18px;
+	}
+	/* aj 0909 */
+	.second_btn .btn_2 i {
+		font-size: 15px;
+	}
+
+	/* aj 0909 */
+	.first_btn .btn_1 i {
+		font-size: 15px;
+	}
+	/* aj 0909 */
+	.third_btn .btn_3 i {
+		font-size: 15px;
+	}
+	/* aj 0909 */
+	.first_btn .btn_1 {
+		width: 100%;
+		white-space: nowrap;
+	}
+
+	/* aj 1909 */
+	.playlist-asset-1.second_col .play_send {
+	}
+	/* aj 2609 */
+	.dashboard-playlist-heading .playheading {
+		font-size: 18px !important;
+		/* text-transform: capitalize; */
+	}
+	/* aj 2609 */
+	.dashboard_page .first_col .playheading::before {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f0da";
+		font-size: 19px;
+		margin-right: 2px;
+	}
+
+	/* aj 2609 */
+	.dashboard-playlist-heading .dashboard-page-fas-caret {
+		display: none;
+	}
+
+	/* aj 2609 */
+	.text-center-mobile {
+		text-align: center;
+	}
+	
+	/* 2810 */
+	.Playlist_maintance .Playlist_btn_area {
+    gap: 2%;
+}
+	
+	/* 2810 */
+	.Playlist_maintance .Playlist_btn_area input[type="submit"] {
+	    width: 100%;
+	}
+	
+	/* 2810 */
+	.Playlist_maintance .Playlist_btn_area a {
+	    width: 100%;
+	    margin-left: 0;
+	}
+}
+@media (max-width: 425px) {
+	/* aj 2709 */
+	td.pen_icon {
+		text-align: center;
+	}
+	/* aj 2709 */
+	td.Trash a i {
+		/*text-align: right;*/
+	}
+	.google a,
+	.facebook a {
+		font-size: 14px;
+	}
+	.header_right_side .content h4 {
+		font-size: 14px;
+	}
+	.header_right_side .content h1 {
+		font-size: 14px;
+	}
+	/* aj 1209 */
+	.bg h2 {
+		font-size: 13px;
+	}
+	.Table_row th {
+		font-size: 9px;
+		text-align: center;
+	}
+	.table_data h5,
+	.Table_row .Playlist_name {
+		font-size: 11px;
+		margin: 0;
+	}
+	/* aj 2109 */
+	.Playlist_name {
+		font-size: 10px !important;
+		/*margin: 0;*/
+		/*overflow: hidden;*/
+		/*text-overflow: ellipsis;*/
+		/*display: -webkit-box;*/
+		/*-webkit-line-clamp: 1; */
+		/*line-clamp: 1;*/
+		/*-webkit-box-orient: vertical;*/
+		line-height: 1.5rem;
+	}
+	.pen_icon i {
+		font-size: 10px;
+	}
+	.Table_row .TV_icon i,
+	.Table_row .Trash i {
+		font-size: 10px;
+		width: 20px;
+		height: 20px;
+	}
+
+	.preview_btn button {
+		margin-right: 15px;
+	}
+	.screenBtn {
+		font-size: 14px;
+		padding: 12px 15px;
+	}
+	.table_data .row_img {
+		/* display: none; */
+		width: initial;
+	}
+	.table_data {
+		margin: 2px 2px;
+	}
+	.Docs i {
+		font-size: 80px;
+	}
+	.mobile_view {
+		display: inherit;
+	}
+	.header_right_side1 .img {
+		width: 30%;
+	}
+	.first_col .animation {
+		margin-left: 0px;
+		margin-right: 0;
+		width: 100% !important;
+	}
+	.second_col .play_send {
+		margin-top: 10px;
+		margin-right: 0px;
+		width: 48.5%;
+		text-align: center;
+	}
+	/* aj 2609 */
+	.second_col .play_send a {
+		margin-right: 0px;
+		display: inline-block;
+		width: 100%;
+		height: 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.Playlist_create {
+		margin-left: 0px;
+	}
+	.img1 {
+		height: 125px;
+	}
+	.header_right_side1 .content {
+		width: 50%;
+		color: #777888;
+		margin-right: 20px;
+	}
+	.header_right_side1 .content h4 {
+		font-size: 15px;
+	}
+	.header_right_side1 span {
+		width: 20px;
+		height: 20px;
+		font-size: 15px;
+	}
+	.header_right_side1 .content h1 {
+		font-size: 18px;
+	}
+	.btn_design {
+		font-size: 15px;
+		padding: 4px 4px;
+	}
+	.row_control,
+	.row_control1 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.all_btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: nowrap;
+		height: 60px;
+		gap: 1%;
+		margin-bottom: 35px;
+	}
+	.first_btn .btn_1 a {
+		text-decoration: none;
+		background: #e0eff4;
+		padding: 12px 16px;
+		padding-left: 50px;
+		color: #3095b5;
+		border-radius: 5px;
+		display: inline-block;
+		width: 100%;
+		white-space:nowrap;
+	}
+	.second_btn .btn_2 a,
+	.third_btn .btn_3 a {
+		text-decoration: none;
+		background: #e0eff4;
+		padding: 12px 10px;
+		padding-left: 46px;
+		color: #3095b5;
+		border-radius: 5px;
+		display: inline-block;
+		font-size: 16px;
+		width: 100%;
+		white-space:nowrap;
+	}
+	.assets_btn {
+		display: flex;
+		justify-content: start;
+	}
+	/* aj 1309 */
+	.img_down_content {
+		margin-bottom: 0;
+	}
+	.main_header h2 {
+		font-size: 24px;
+	}
+	.main_header .upload_btn1 {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		background: #3095b5;
+		color: #fff;
+		font-family: "Poppins";
+		width: 80%;
+		margin-left: auto !important;
+		float: right;
+	}
+	.owl-carousel .owl-nav .owl-prev span {
+		width: 30px;
+		height: 30px;
+		line-height: 26px;
+		top: -35px;
+		right: 45px;
+	}
+	.owl-carousel .owl-nav .owl-next span {
+		width: 30px;
+		height: 30px;
+		line-height: 26px;
+		top: -35px;
+	}
+	.second_col {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		margin-bottom: 30px;
+		flex-wrap: wrap;
+	}
+
+	.second_col .play_Time {
+		position: relative;
+		margin-top: 10px;
+		/* margin-left: 15px; */
+	}
+
+	/* aj 1609 */
+	.second_col .play_Time {
+		margin-left: 0px;
+		width: 48.5%;
+	}
+	/* aj 1609 */
+	.Playlist_create.mobile_view {
+		margin-left: 0;
+		width: 48.5%;
+		text-align: center;
+	}
+	.first_col h1 {
+		font-size: 20px;
+	}
+	.Accordion_Part .MTime h5,
+	.Accordion_Part .Aftenoon_time h5,
+	.Accordion_Part .Night_time h5 {
+		font-size: 15px;
+	}
+	.first_col .playheading {
+		font-size: 17px;
+	}
+	.second_col {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+		flex-wrap: wrap;
+	}
+	.mobile_none {
+		display: none !important;
+	}
+	.mobile_view a {
+		/* margin-top: 30px; */
+	}
+	.main_header .upload_btn1 .up_icon {
+		left: 18px;
+	}
+
+	.Playlist_create a {
+		padding: 9px 38px;
+	}
+	.Playlist_create.mobile_view a {
+		padding: 9px 40px;
+		width: 100%;
+		justify-content: center;
+		height: 45px;
+	}
+	.assets_btn .upload_btn1 {
+		width: 49.5%;
+	}
+
+	.assets_btn .create_btm {
+		margin-left: 0;
+		width: 49.5%;
+	}
+	/* aj 1209 */
+	.screenBtn {
+		font-size: 12px;
+		padding: 15px 10px !important;
+		width: 100%;
+		width: max-content;
+	}
+	/* aj 1409 */
+	.social-icons {
+		position: initial;
+		right: unset;
+		bottom: unset;
+		padding: 15px;
+		display: flex;
+		flex-flow: wrap;
+		justify-content: center;
+		gap: 5px;
+	}
+	/* aj 1409 */
+	#sidebar.active #sidebarCollapse i {
+		display: flex;
+		padding-left: 8px;
+	}
+	/* aj 1609 */
+	.sidebar-collapse-btn-2 {
+		left: 20px;
+		top: 26px;
+		width: 26px;
+		height: 26px;
+		font-size: 15px;
+	}
+	/* aj 1409 */
+	.mCS_img_loaded {
+		width: 170px;
+	}
+	/* aj 1409 */
+	#sidebar.active #sidebarCollapse {
+		right: 7px;
+	}
+	/* aj 1409 */
+	.dashboard_title {
+		justify-content: flex-start;
+		padding-left: 15px;
+	}
+	/* aj 2709 */
+	.dashboard_title .icon i {
+		/*padding-left: 8px;*/
+	}
+	/* aj 2109 */
+	.assets-page .screenBtn {
+		width: 100% !important;
+	}
+
+	/* aj 2709 */
+	footer {
+		position: static;
+	}
+
+	/* aj 2709 */
+	.recent_file_carousel ul.dropdown-menu.show {
+		overflow-y: scroll;
+		height: 120px;
+	}
+	/* aj 2709 */
+	.Table_row .Trash a {
+		float: right;
+		padding-right: 10px;
+	}
+	/* aj 0710 */
+	.screenBtn.screen-btn-top {
+		display: inline-block;
+		height: min-content;
+		padding: 5px 8px !important;
+		font-size: 13px;
+	}
+}
+@media (max-width: 390px) {
+	.header_right_side1 .content h4 {
+		font-size: 12px;
+	}
+	.header_right_side1 .content h1 {
+		font-size: 16px;
+	}
+	.main_header h2 {
+		font-size: 18px;
+	}
+	.mobile_view a {
+		padding: 8px 20px;
+		margin-left: 0px;
+	}
+	.second_col .play_Time {
+		margin-left: 0px;
+		width: 48.5%;
+	}
+	.img_down_content h4 {
+		font-size: 14px;
+	}
+	/* aj 1409 */
+	.screenBtn {
+		font-size: 16px;
+		padding: 8px 10px;
+		width: max-content;
+	}
+	.Portfollio .img1,
+	.video_item,
+	.Portfollio .main_div {
+		height: 148px;
+	}
+	.main_div h3 {
+		font-size: 14px;
+		margin-top: 15px;
+	}
+	/* aj 0809 */
+	.main_div h5 {
+		font-size: 11px;
+		margin-bottom: 0;
+	}
+	/* 0809 */
+	.main_div h4 {
+		font-size: 11px;
+		margin-bottom: 0;
+	}
+	/* aj 0809 */
+	.Playlist_create.mobile_view {
+		margin-left: 0;
+		width: 48.5%;
+		text-align: center;
+	}
+	/* aj 0809 */
+	.Playlist_create.mobile_view {
+		/* margin-left: 32px; */
+	}
+	/* aj 0809 */
+	.Playlist_create_mobile_view {
+		width: initial;
+	}
+	/* aj 0809 */
+	.Playlist_create_mobile_view > a {
+		display: inherit;
+		width: inherit;
+	}
+	/* aj 2609 */
+	.upload_btn1 {
+		/* padding: 15px 60px; */
+	}
+	/* aj 2209 */
+	.playlist_pllist.Playlist_create.mobile_view a {
+		height: 45px;
+		margin-top: 5px;
+	}
+	/* aj 0710 */
+	.screenBtn.screen-btn-top {
+		display: inline-block;
+		height: min-content;
+		padding: 5px 8px !important;
+		font-size: 13px;
+	}
+
+	/* aj 0710 */
+	.dashboard_title #sidebarCollapse.icon i {
+		padding-left: 8px;
+	}
+}
+@media (max-width: 375px) {
+	.img_down_content i {
+		font-size: 15px;
+	}
+	.img_down_content h4 {
+		font-size: 14px;
+	}
+	.recent_item {
+		height: 120px;
+	}
+	.header_right_side1 .content {
+		width: 50%;
+		color: #777888;
+		margin-right: 20px;
+	}
+	.header_right_side1 .content h4 {
+		font-size: 13px;
+	}
+	.header_right_side1 span {
+		width: 20px;
+		height: 20px;
+		font-size: 15px;
+	}
+	.header_right_side1 .content h1 {
+		font-size: 16px;
+	}
+	.btn_design {
+		font-size: 15px;
+	}
+	/* aj 2109 */
+	.all_btn {
+		/*display: flex;*/
+		/*justify-content: space-between;*/
+		/*align-items: center;*/
+		/*flex-wrap: wrap;*/
+		/*height: 125px;*/
+	}
+	.first_btn .btn_1 a {
+		/*text-decoration: none;*/
+		/*background: #3095b5;*/
+		/*padding: 12px 25px;*/
+		/*padding-left: 58px;*/
+		/*color: #fff;*/
+		/*border-radius: 5px;*/
+		text-decoration: none;
+		background: #e0eff4;
+		padding: 12px 16px;
+		padding-left: 50px;
+		color: #3095b5;
+		border-radius: 5px;
+		display: inline-block;
+		font-size: 12px;
+		white-space:nowrap;
+	}
+	.second_btn .btn_2 a,
+	.third_btn .btn_3 a {
+		text-decoration: none;
+		background: #e0eff4;
+		padding: 12px 16px;
+		padding-left: 58px;
+		color: #3095b5;
+		border-radius: 5px;
+		font-size: 12px;
+		white-space:nowrap;
+	}
+	.assets_btn {
+		display: flex;
+		justify-content: start;
+	}
+	/* aj 1909 */
+	.img_down_content {
+		margin-bottom: 5px;
+	}
+	.row_control,
+	.row_control1 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.main_header h2 {
+		font-size: 20px;
+	}
+	.main_header .upload_btn1 {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		background: #3095b5;
+		color: #fff;
+		font-family: "Poppins";
+		margin: auto;
+		width: 80%;
+		margin-left: auto;
+	}
+	.owl-carousel .owl-nav .owl-prev span {
+		width: 30px;
+		height: 30px;
+		line-height: 26px;
+		top: -35px;
+		right: 45px;
+	}
+	.owl-carousel .owl-nav .owl-next span {
+		width: 30px;
+		height: 30px;
+		line-height: 26px;
+		top: -35px;
+	}
+	.second_col {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		margin-bottom: 30px;
+		flex-wrap: wrap;
+	}
+	/* aj 1609 */
+	.second_col .play_send {
+		/* margin-top: 0px; */
+		/* margin-right: 0px; */
+	}
+	/* aj 1609 */
+	.second_col .play_Time {
+		/* position: relative; */
+		/* margin-top: 30px; */
+		/* margin-left: 0; */
+	}
+	.second_col .play_Time .PlayTime {
+		padding: 0.25rem 0.5rem;
+	}
+	.Playlist_create a {
+		padding: 9px 45px;
+	}
+	/* day */
+	.Schedule_parent .Button_Parent {
+		width: max-content;
+		margin: auto;
+	}
+	.calander_title h1 {
+		font-size: 16px;
+		margin-top: 10px;
+	}
+	.Accordion_Part .MTime h5,
+	.Accordion_Part .Aftenoon_time h5,
+	.Accordion_Part .Night_time h5 {
+		font-size: 12px;
+	}
+	.for_bg_color {
+		margin-top: 30px;
+	}
+	.second_col {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+		flex-wrap: wrap;
+	}
+	.all_img {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.header_right_side span {
+		width: 25px;
+		height: 25px;
+		font-size: 15px;
+	}
+
+	.playlist_item_btn,
+	.playlist_btn_row {
+		justify-content: space-between;
+	}
+	.first_col .animation {
+		margin-right: 0px;
+		margin-left: 0;
+	}
+	/* aj 1609 */
+	.first_col .preview_btn {
+		/* margin-right: 0px; */
+		/* margin-top: 30px; */
+	}
+	/* aj 1609 */
+	.preview_btn a {
+		/* margin-top: 0; */
+		/* margin-left: 0px; */
+	}
+	.Playlist_create {
+		margin-left: 0px;
+	}
+	.img1 {
+		height: 125px;
+	}
+}
+@media (max-width: 375px) and (min-width: 321px) {
+	/* aj 1609 */
+	.mobile_view a,
+	.second_col .play_send a {
+		/* padding: 8px 40px; */
+	}
+	/* aj 1609 */
+	.second_col .play_send a {
+		/* padding: 8px 35px; */
+		/* margin-right: 0px; */
+	}
+	.Playlist_create {
+		margin-left: 0px;
+	}
+}
+@media (max-width: 320px) {
+	.header_right_side .content h4 {
+		font-size: 12px;
+	}
+	.header_right_side .content h1 {
+		font-size: 14px;
+	}
+	.header_right_side1 .content {
+		width: 70%;
+		color: #777888;
+		margin-right: 10px;
+	}
+	.header_right_side1 .content h4 {
+		font-size: 12px;
+	}
+	.header_right_side1 span {
+		width: 20px;
+		height: 20px;
+		font-size: 15px;
+	}
+	.header_right_side1 .content h1 {
+		font-size: 14px;
+	}
+	.btn_design {
+		font-size: 15px;
+	}
+	.all_btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		height: 125px;
+	}
+	.first_btn .btn_1 a {
+		text-decoration: none;
+		background: #3095b5;
+		padding: 12px 10px;
+		padding-left: 58px;
+		color: #fff;
+		border-radius: 5px;
+		white-space:nowrap;
+	}
+	.second_btn .btn_2 a,
+	.third_btn .btn_3 a {
+		text-decoration: none;
+		background: #e0eff4;
+		padding: 12px 10px;
+		padding-left: 58px;
+		color: #3095b5;
+		border-radius: 5px;
+	}
+	.assets_btn {
+		display: flex;
+		justify-content: start;
+	}
+	.img_down_content {
+		margin-bottom: 20px;
+	}
+	.first_col h1 {
+		font-size: 18px;
+	}
+	.btn_design {
+		font-size: 15px;
+	}
+	.Playlist_btn_area input[type="submit"] {
+		padding: 10px;
+	}
+	.Playlist_create {
+	}
+	.second_col {
+		justify-content: space-between;
+	}
+	/* aj 1609 */
+	.Playlist_create a {
+		/* margin-left: 15px; */
+		/* font-size: 16px; */
+	}
+	.preview_btn a {
+		margin-left: 0px;
+	}
+	.first_col .animation {
+		margin-left: 0px;
+	}
+	.poppup button {
+		font-size: 15px;
+	}
+	.Table_row .TV_icon i,
+	.Table_row .Trash i {
+		font-size: 11px;
+		width: 25px;
+		height: 25px;
+	}
+	.Table_row th {
+		font-size: 12px;
+	}
+	.playlist_btn_row {
+		justify-content: space-between;
+	}
+	.playlist_btn_row .Playlist_create a {
+		margin-left: 0;
+	}
+	.Accordion_Part .morning_time,
+	.Accordion_Part .Aftenoon_time,
+	.Accordion_Part .Night_time {
+		padding: 0 5px;
+	}
+	.control_row .main_div {
+		height: 150px;
+	}
+	.main_div i {
+		font-size: 65px;
+		color: #b7caf5;
+	}
+	.img1 {
+		height: 125px;
+	}
+	.first_col .animation {
+		margin-right: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.second_col .play_send a {
+		margin-right: 45px;
+	}
+	.second_col .play_send a {
+		padding: 8px 35px;
+		margin-right: 0px;
+	}
+	.second_col .play_Time {
+		margin-left: 0px;
+	}
+	.Playlist_create {
+		margin-left: 0px;
+	}
+	.animation {
+		width: 148px !important;
+		margin-bottom: 0% !important;
+	}
+}
+@media (min-width: 1800px) {
+	.first_col .playheading {
+		margin-right: 30px;
+	}
+	.Playlist_maintance .Playlist_heading h2 {
+		font-size: 30px;
+	}
+	/* aj 2909 */
+	.Playlist_btn_area input[type="submit"] {
+		/*font-size: 22px;*/
+	}
+	.Playlist_create {
+	}
+	.Playlist_btn_area .up_icon {
+		left: 20px;
+	}
+	.preview_btn {
+		/* margin-right: 30px; */
+	}
+	.Playlist_btn_area .upload_btn1 {
+		font-size: 22px;
+	}
+	/* aj 0710-02 */
+	.Play_List3 {
+		/* height: 350px; */
+	}
+	.playlist_btn_row {
+		display: flex;
+		justify-content: end !important;
+	}
+	.all_img {
+		/* grid-template-columns: repeat(4, 1fr); */
+		/* height: 490px !important; */
+	}
+	.second_col .play_send {
+		/* margin-right: 30px; */
+	}
+	.first_col .animation {
+		/* margin-right: 30px; */
+		/* font-size: 22px; */
+		/* line-height: 1.2; */
+	}
+	.first_col h1 {
+		margin-right: 30px;
+		font-size: 35px;
+	}
+	.second_col,
+	.first_col {
+		/* display: inherit; */
+		/* justify-content: start; */
+	}
+	.Playlist_create a {
+		margin-left: 0px;
+		font-size: 20px;
+	}
+	/* aj 0710 */
+	#sidebar ul li a {
+		font-size: 20px;
+	}
+	.main_header h2 {
+		font-size: 28px;
+	}
+	.main_content_area .left_btn .ChoseScreen {
+		font-size: 22px;
+	}
+	/* aj 1209 */
+	.main_header .upload_btn1 {
+		font-size: 16px;
+	}
+	.second_col .play_Time p {
+		font-size: 20px;
+	}
+	.second_col .play_send a {
+		font-size: 20px;
+	}
+	.Play_List1 {
+		/* height: 350px; */
+	}
+	.second_col .play_Time span {
+		/* font-size: 14px; */
+	}
+	.for_bg_color h1 {
+		font-size: 24px;
+	}
+	.for_bg_color ul li a {
+		font-size: 20px;
+	}
+	.for_bg_color .Play_1 {
+		padding: 5px 30px;
+	}
+	/* aj 1909 */
+	.recent_file h2 {
+		/* font-size: 30px; */
+	}
+	.recent_file .view_allfile a {
+		font-size: 20px;
+	}
+	/* aj 2609 */
+	.img_down_content h4 {
+		/* font-size: 20px; */
+	}
+	/* aj 2609 */
+	.img_down_content i {
+		/* font-size: 20px; */
+	}
+	/* aj 0710 */
+	.sidebar_accordion h3 {
+		/* font-size: 24px; */
+		font-size: 20px;
+	}
+	.sidebar ul li {
+		margin-left: 40px;
+	}
+	.Table_row th {
+		font-size: 24px;
+	}
+	.bg h2 {
+		/* font-size: 28px; */
+	}
+	.screenBtn {
+		font-size: 20px;
+	}
+	.screenBtn:hover {
+		color: #fff;
+	}
+	.table_data h5 {
+		font-size: 24px;
+	}
+	.Table_row .Date {
+		font-size: 22px;
+	}
+	.Table_row .Playlist_name {
+		font-size: 22px;
+	}
+	.pagination_design ul li {
+		height: 30px;
+		width: 30px;
+	}
+	.pagination_design ul li a {
+		font-size: 20px;
+	}
+	.next {
+		width: 70px !important;
+	}
+	.prev {
+		width: 130px !important;
+	}
+	.all_btn {
+		display: inherit;
+		justify-content: start;
+	}
+	.second_btn {
+		/* margin: 0 30px; */
+	}
+	.first_btn .btn_1,
+	.second_btn .btn_2,
+	.third_btn .btn_3 {
+		font-size: 22px;
+	}
+	.assets_btn .upload_btn1 {
+		width: 170px;
+		font-size: 20px;
+	}
+	.Portfollio .img1,
+	.video_item {
+		height: 260px;
+	}
+	.Portfollio .main_div {
+		/* height: 260px; */
+	}
+	.btn_design {
+		font-size: 22px;
+	}
+	.main_div h3 {
+		font-size: 24px;
+		margin-top: 50px;
+	}
+	.main_div i {
+		font-size: 120px;
+	}
+	.main_div h5 {
+		font-size: 20px;
+	}
+	.main_div h4 {
+		font-size: 24px;
+	}
+	.main_div .fa-folder {
+		font-size: 100px;
+	}
+	/* aj 0710 */
+	.sidebar ul li a h3 {
+		font-size: 20px;
+	}
+	.search input::placeholder {
+		font-size: 20px;
+	}
+	.header_right_side .img {
+		width: 10%;
+	}
+	.header_right_side .content h1 {
+		font-size: 22px;
+	}
+	.header_right_side .content h4 {
+		font-size: 18px;
+	}
+	.food_img h1 {
+		font-size: 24px;
+	}
+	.eye_icon button {
+		font-size: 22px;
+	}
+	.Create_schedule1 .Create_schedule {
+		font-size: 22px;
+	}
+	.fc-state-default {
+		font-size: 22px;
+	}
+	.fc-text-arrow {
+		line-height: 30px;
+	}
+	.fc-border-separate tr.fc-last th {
+		font-size: 20px;
+	}
+	.fc-event-inner {
+		line-height: 24px;
+		font-size: 18px;
+	}
+	.fc-week .fc-day > div .fc-day-number {
+		font-size: 18px;
+	}
+	.fc-event-vert .fc-event-time {
+		font-size: 16px;
+	}
+	.fc-agenda .fc-agenda-axis {
+		font-size: 18px;
+	}
+	.Play_List5 .playlist_div_1 {
+		font-size: 22px;
+	}
+}
+
+/* sourav ganguly 2023 */
+
+@media (max-width: 500px)  {
+    
+    .fc-header>tbody>tr {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+    
+}
+
+@media only screen and (min-width:769px) and (max-width:1199px) {
+    #sidebar {
+/*    margin-left: -300px!important;*/
+}
+#sidebar.active {
+/*    width: 300px!important;*/
+/*    position: fixed!important;*/
+/*    top: 0!important;*/
+/*    left: 0!important;*/
+/*    height: 100%!important;*/
+    z-index:1010!important;
+/*    color: #fff!important;*/
+/*    transition: all .3s!important;*/
+/*    overflow-y: auto!important;*/
+/*    overflow-x: hidden!important;*/
+}
+
+.main_header h2 {
+/*    margin-left: 50px!important;*/
+}
+
+}
+
+@media only screen  and (min-width:1200px) {
+    #sidebar {
+/*    width: 300px;*/
+/*    position: fixed!important;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 100%!important;*/
+/*    z-index: 999;*/
+/*    color: #fff;*/
+/*    transition: all .3s;*/
+/*    overflow-y: auto!important;*/
+/*    overflow-x: hidden!important;*/
+}
+
+#sidebar.active {
+/*    margin-left: -300px;*/
+z-index:1010!important;
+}
+    
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+.main_header h2 {
+/*    margin-left: 75px!important;*/
+}
+}
+
+
+@media only screen and (max-width: 768px) {
+  #sidebar {
+    width: 300px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    z-index: 999;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    margin-left: -500px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+    z-index:1010!important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+  #sidebar {
+    margin-left: -300px !important;
+  }
+  #sidebar.active {
+    width: 300px !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    z-index:1010!important;
+    color: #fff !important;
+    transition: all 0.3s !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    margin-left: 0 !important;
+  }
+  .main_header h2 {
+    margin-left: 50px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #sidebar {
+    width: 300px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    z-index:1010!important;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+  #sidebar.active {
+    margin-left: -300px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+  .main_header h2 {
+    margin-left: 75px !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  #content.active .left_header1 {
+    opacity: 0;
+  }
+}
+
+.lightboxOverlay{
+	height: 1300px;
+}
+
+/* @media only screen and (max-width: 768px) {
+  #content.active .left_header1 {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1199px) {
+  #content.active .left_header1 {
+    margin-left: 30px;
+    width: 40%;
+  }
+} ; */
